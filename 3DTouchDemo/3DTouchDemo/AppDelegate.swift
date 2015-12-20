@@ -48,7 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     // MARK: - Other UIApplicationDelegate
 
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
-        print("\(completionHandler(true))")
+        
+        completionHandler(true)
+
         print("\(shortcutItem.type)")
     }
 
