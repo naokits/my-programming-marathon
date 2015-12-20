@@ -13,6 +13,34 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
 
+    lazy var staticShortcuts: [UIApplicationShortcutItem] = {
+        guard let shortcuts = NSBundle.mainBundle().infoDictionary?["UIApplicationShortcutItems"] as? [[String: NSObject]] else { return [] }
+        
+        let shortcutItems = shortcuts.flatMap { shortcut -> [UIApplicationShortcutItem] in
+
+            guard let shortcutType = shortcut["UIApplicationShortcutItemType"] as? String,
+                var shortcutTitle = shortcut["UIApplicationShortcutItemTitle"] as? String else { return [] }
+            
+            if let localizedTitle = NSBundle.mainBundle().localizedInfoDictionary?[shortcutTitle] as? String {
+                shortcutTitle = localizedTitle
+            }
+            
+            var shortcutSubtitle = shortcut["UIApplicationShortcutItemSubtitle"] as? String
+            if shortcutSubtitle != nil {
+                shortcutSubtitle = NSBundle.mainBundle().localizedInfoDictionary?[shortcutSubtitle!] as? String
+            }
+            
+            return [
+                UIApplicationShortcutItem(type: shortcutType, localizedTitle: shortcutTitle, localizedSubtitle: shortcutSubtitle, icon: nil, userInfo: nil)
+            ]
+        }
+
+        return shortcutItems
+    }()
+    
+    /// Shortcuts defined by the application and modifiable based on application state.
+    lazy var dynamicShortcuts = UIApplication.sharedApplication().shortcutItems ?? []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +53,10 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        
+        print("staticShortcuts: \(staticShortcuts)")
+        print("dynamicShortcuts: \(dynamicShortcuts)")
     }
 
     override func viewWillAppear(animated: Bool) {
