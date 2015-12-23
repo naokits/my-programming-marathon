@@ -1,0 +1,6 @@
+framework module Pods_VideoSplashDemo {
+  umbrella header "Pods-VideoSplashDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
