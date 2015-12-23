@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -32,25 +33,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Detail view content goes here" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="72" width="560" height="316"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le9-Je-fMa">
+                                <rect key="frame" x="270" y="85" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0a4-lR-04c"/>
+                                    <constraint firstAttribute="width" constant="60" id="860-Bu-jL9"/>
+                                    <constraint firstAttribute="height" constant="30" id="P5i-gn-VDt"/>
+                                    <constraint firstAttribute="width" constant="60" id="mWG-8o-PiM"/>
+                                </constraints>
+                                <state key="normal" title="再生開始"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0a4-lR-04c"/>
+                                        <exclude reference="860-Bu-jL9"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tappedPlayButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="j5S-db-uqW"/>
+                                </connections>
+                            </button>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
+                                <rect key="frame" x="20" y="132" width="560" height="316"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="316" id="Lwc-GZ-U8o"/>
+                                    <constraint firstAttribute="width" constant="560" id="gMM-gN-XRy"/>
+                                    <constraint firstAttribute="width" constant="560" id="kaz-dk-fim"/>
+                                    <constraint firstAttribute="height" constant="316" id="qeQ-UY-zLq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lwc-GZ-U8o"/>
+                                        <exclude reference="kaz-dk-fim"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="le9-Je-fMa" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="4Kb-ck-SRR"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="le9-Je-fMa" secondAttribute="bottom" constant="17" id="E8Q-hk-CrG"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="I9w-Xj-jPo"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="JA6-eG-DJi"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="le9-Je-fMa" secondAttribute="bottom" constant="17" id="KGj-q9-BXy"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="PrX-5N-OUJ"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
+                            <constraint firstItem="le9-Je-fMa" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="21" id="hs7-aI-ueq"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
+                            <constraint firstItem="le9-Je-fMa" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="21" id="sdg-e8-yj0"/>
                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="le9-Je-fMa" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="xq9-2u-SGc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KGj-q9-BXy"/>
+                                <exclude reference="Tsc-yG-G1q"/>
+                                <exclude reference="jWN-iV-94e"/>
+                                <exclude reference="tHV-ZD-HQj"/>
+                                <exclude reference="sdg-e8-yj0"/>
+                                <exclude reference="xq9-2u-SGc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
+                        <outlet property="playButton" destination="le9-Je-fMa" id="hHw-H1-skz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

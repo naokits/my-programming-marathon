@@ -13,6 +13,7 @@ import AVFoundation
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
     let moviePlayer = AVPlayerViewController()
@@ -83,5 +84,9 @@ class DetailViewController: UIViewController {
             }
         })
     }
+    
+    @IBAction func tappedPlayButton(sender: AnyObject) {
+    }
+
 }
 
