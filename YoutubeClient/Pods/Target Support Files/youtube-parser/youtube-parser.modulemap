@@ -1,0 +1,6 @@
+framework module youtube_parser {
+  umbrella header "youtube-parser-umbrella.h"
+
+  export *
+  module * { export * }
+}
