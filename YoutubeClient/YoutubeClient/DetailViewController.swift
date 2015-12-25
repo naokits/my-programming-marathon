@@ -13,11 +13,12 @@ import AVFoundation
 
 class DetailViewController: UIViewController {
 
+    // MARK: - Properties
+    
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    let moviePlayer = AVPlayerViewController()
-
+    let avPlayer = AVPlayerViewController()
 
     var detailItem: AnyObject? {
         didSet {
@@ -25,6 +26,8 @@ class DetailViewController: UIViewController {
             self.configureView()
         }
     }
+
+    // MARK: - View life cycle
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -40,22 +43,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        
-        
-        moviePlayer.view.frame = view.frame
-//        view.addSubview(moviePlayer.view)
-        self.presentViewController(moviePlayer, animated: true) { () -> Void in
-            //
-        }
-        
-
-//        let youtubeURL = NSURL(string: "https://www.youtube.com/watch?v=swZJwZeMesk")!
-        if let videoInfo = self.detailItem {
-            if let videoURLString = videoInfo["url"] as? String {
-                let youtubeURL = NSURL(string: videoURLString)!
-                playVideoWithYoutubeURL(youtubeURL)
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,12 +51,31 @@ class DetailViewController: UIViewController {
     }
 
 
+    // MARK: - Actions
+    
+    @IBAction func tappedPlayButton(sender: AnyObject) {
+        avPlayer.view.frame = view.frame
+        self.presentViewController(avPlayer, animated: true) { () -> Void in
+            //
+        }
+        
+        
+        //        let youtubeURL = NSURL(string: "https://www.youtube.com/watch?v=swZJwZeMesk")!
+        if let videoInfo = self.detailItem {
+            if let videoURLString = videoInfo["url"] as? String {
+                let youtubeURL = NSURL(string: videoURLString)!
+                playVideoWithYoutubeURL(youtubeURL)
+            }
+        }
+    }
+
+    // MARK: - Utility Methods
+    
     func playVideoWithYoutubeURL(url: NSURL) {
         let playerItem = AVPlayerItem.init(URL: url)
         let player = AVPlayer(playerItem: playerItem)
         
-        self.moviePlayer.player = player
-
+        self.avPlayer.player = player
         
         Youtube.h264videosWithYoutubeURL(url, completion: { (videoInfo, error) -> Void in
             if let videoURLString = videoInfo?["url"] as? String where ((videoInfo?["title"] as? String) != nil) {
@@ -78,15 +84,11 @@ class DetailViewController: UIViewController {
                 let playerItem = AVPlayerItem.init(URL: NSURL(string: videoURLString)!)
                 let player = AVPlayer(playerItem: playerItem)
                 
-                self.moviePlayer.player = player
-//                self.moviePlayer.contentURL = NSURL(string: videoURLString)
-
+                self.avPlayer.player = player
+                //                self.avPlayer.contentURL = NSURL(string: videoURLString)
+                self.avPlayer.player?.play()
             }
         })
     }
-    
-    @IBAction func tappedPlayButton(sender: AnyObject) {
-    }
-
 }
 
