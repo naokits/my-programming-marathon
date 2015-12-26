@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'VideoSplashDemo' do
+  pod "VideoSplash"
+end
+
+target 'VideoSplashDemoTests' do
+  pod "VideoSplash"
+end
+
+target 'VideoSplashDemoUITests' do
+
+end

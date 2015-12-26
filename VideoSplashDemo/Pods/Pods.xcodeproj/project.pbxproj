@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		167E989652CC2E035D61F2C8B3CB0401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		30C965E02A5D314822BC1C86C8B3F100 /* VideoSplash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 453F21E70512004B5DDDD49ADB69526F /* VideoSplash-dummy.m */; };
+		4D8579AB7BD82A0535A8A2DE9A67C0AE /* VideoCutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A61AD0031F5E552E82AABE361D6C0B /* VideoCutter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5437CC55B8D676BA13D680FF9947AE3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		6DDC64ACCBB121FA775105917B284498 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		70558530869817B209395A16B0E3088E /* Pods-VideoSplashDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C7E60F3237DA558EAA79A707668242 /* Pods-VideoSplashDemo-dummy.m */; };
+		86BA3F6256AF98637ADFA901F97E28A0 /* VideoSplash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89548641CBF8025BBA5B18E56FE4B913 /* VideoSplash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97668DCC5A15DD48459F2DA99267646D /* Pods-VideoSplashDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 770BF03972AA6714519E3C9FF8DA4CAB /* Pods-VideoSplashDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B723447E5145C3759724D17E6419B914 /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6211FBB6B7020A6F10DBB26CD5067 /* VideoSplashViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C0A02CFD8FC226FD138D70E6D39A7342 /* Pods-VideoSplashDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 640D102A5CB51AB0A3AE39DE034CB1FB /* Pods-VideoSplashDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F81418AB26387AFB533D222B11B2E425 /* Pods-VideoSplashDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3C76AC2FD74E743C87D396A7ECBA38 /* Pods-VideoSplashDemoTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A424AF1148FFB36897405BF06203BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5FD2186ED2EF4188D01A7210F1D01F1;
+			remoteInfo = VideoSplash;
+		};
+		B35A7043E869245CFDED5A8421536960 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5FD2186ED2EF4188D01A7210F1D01F1;
+			remoteInfo = VideoSplash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0686F522B2901B7DBD21C27B08BEE44E /* Pods-VideoSplashDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VideoSplashDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0EBE3041B8C25AACF1950E93A7F20D6D /* Pods-VideoSplashDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VideoSplashDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2DF6211FBB6B7020A6F10DBB26CD5067 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoSplashViewController.swift; path = VideoSplash/Source/VideoSplashViewController.swift; sourceTree = "<group>"; };
+		33494B5DB1A8434654C65A7E14EE898D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34A5764E90791F3EEA1F9D71906A7832 /* Pods-VideoSplashDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VideoSplashDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3B99438E449EF70DEE9791626A718264 /* Pods-VideoSplashDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VideoSplashDemoTests-frameworks.sh"; sourceTree = "<group>"; };
+		3C44E3DE1945D0AFDCE8AB525C2F168B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CAC8B5F20E8987311A5A07E46FB2FDA /* Pods-VideoSplashDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VideoSplashDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D382F2ED95237EA7A7E3606EE52D21D /* Pods-VideoSplashDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VideoSplashDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		453F21E70512004B5DDDD49ADB69526F /* VideoSplash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VideoSplash-dummy.m"; sourceTree = "<group>"; };
+		516C360CED4B87B46AAE15CFC6BEEB3D /* Pods-VideoSplashDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VideoSplashDemoTests-resources.sh"; sourceTree = "<group>"; };
+		54595075E237AF1DBFC29CF9521241FC /* Pods_VideoSplashDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoSplashDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A185326DD951201F571FDD129F4FA86 /* Pods-VideoSplashDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VideoSplashDemo-frameworks.sh"; sourceTree = "<group>"; };
+		640D102A5CB51AB0A3AE39DE034CB1FB /* Pods-VideoSplashDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VideoSplashDemoTests-umbrella.h"; sourceTree = "<group>"; };
+		6BD94718C8CD75EE699139612AB9513B /* Pods-VideoSplashDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VideoSplashDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		72620C043792F9C745D13A9156E588AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A61AD0031F5E552E82AABE361D6C0B /* VideoCutter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoCutter.swift; path = VideoSplash/Source/VideoCutter.swift; sourceTree = "<group>"; };
+		770BF03972AA6714519E3C9FF8DA4CAB /* Pods-VideoSplashDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VideoSplashDemo-umbrella.h"; sourceTree = "<group>"; };
+		782CA2A791DA19521F8C65F0E1F42A39 /* VideoSplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VideoSplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CAF9B34A28264B1AD9202A1B67D8A9 /* Pods-VideoSplashDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VideoSplashDemoTests.modulemap"; sourceTree = "<group>"; };
+		89548641CBF8025BBA5B18E56FE4B913 /* VideoSplash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VideoSplash-umbrella.h"; sourceTree = "<group>"; };
+		96E741507C521977FE1601ED301572A5 /* Pods-VideoSplashDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VideoSplashDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A08B0259E561E0CF13FC9EB6DC469EBC /* VideoSplash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VideoSplash.modulemap; sourceTree = "<group>"; };
+		A1C7E60F3237DA558EAA79A707668242 /* Pods-VideoSplashDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VideoSplashDemo-dummy.m"; sourceTree = "<group>"; };
+		ACECA9BA0557B339DC7853DCD3B7BCBC /* VideoSplash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VideoSplash.xcconfig; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC74B9879F3789AC16E341C3DD0B1112 /* Pods-VideoSplashDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VideoSplashDemo.modulemap"; sourceTree = "<group>"; };
+		DB1DE2646F8AFB91747E070166EF2C6F /* Pods_VideoSplashDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoSplashDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8F6B345AC5D62F1AD54B97E7AAB59D /* Pods-VideoSplashDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VideoSplashDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		E6A4ABA178D3EF7E86403EA525E0FE21 /* VideoSplash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VideoSplash-prefix.pch"; sourceTree = "<group>"; };
+		F2D6F00C5056270D4F87ADFE806E3BF2 /* Pods-VideoSplashDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VideoSplashDemo-resources.sh"; sourceTree = "<group>"; };
+		FE3C76AC2FD74E743C87D396A7ECBA38 /* Pods-VideoSplashDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VideoSplashDemoTests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B36B2557881D6B2DDC839BECF43AD6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5437CC55B8D676BA13D680FF9947AE3B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E06E9471671C7A70E33DAEA5A37057B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167E989652CC2E035D61F2C8B3CB0401 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E400607509F289A0B8BE3EF09B868E7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDC64ACCBB121FA775105917B284498 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CD60D73BBBAE5B498609FF13E53889E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C2B355BE6ECCF64D1271EC531CAD044 /* Pods-VideoSplashDemo */,
+				8561097B9CE5E333F0E78E8028F48835 /* Pods-VideoSplashDemoTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4C2B355BE6ECCF64D1271EC531CAD044 /* Pods-VideoSplashDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3C44E3DE1945D0AFDCE8AB525C2F168B /* Info.plist */,
+				BC74B9879F3789AC16E341C3DD0B1112 /* Pods-VideoSplashDemo.modulemap */,
+				3D382F2ED95237EA7A7E3606EE52D21D /* Pods-VideoSplashDemo-acknowledgements.markdown */,
+				DE8F6B345AC5D62F1AD54B97E7AAB59D /* Pods-VideoSplashDemo-acknowledgements.plist */,
+				A1C7E60F3237DA558EAA79A707668242 /* Pods-VideoSplashDemo-dummy.m */,
+				5A185326DD951201F571FDD129F4FA86 /* Pods-VideoSplashDemo-frameworks.sh */,
+				F2D6F00C5056270D4F87ADFE806E3BF2 /* Pods-VideoSplashDemo-resources.sh */,
+				770BF03972AA6714519E3C9FF8DA4CAB /* Pods-VideoSplashDemo-umbrella.h */,
+				0686F522B2901B7DBD21C27B08BEE44E /* Pods-VideoSplashDemo.debug.xcconfig */,
+				96E741507C521977FE1601ED301572A5 /* Pods-VideoSplashDemo.release.xcconfig */,
+			);
+			name = "Pods-VideoSplashDemo";
+			path = "Target Support Files/Pods-VideoSplashDemo";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				8DB93F6F052A5D08E9B0F070E1187D12 /* Pods */,
+				8F0E3B0CA61C58A33D7F570B0B6DA8E6 /* Products */,
+				2CD60D73BBBAE5B498609FF13E53889E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8561097B9CE5E333F0E78E8028F48835 /* Pods-VideoSplashDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				33494B5DB1A8434654C65A7E14EE898D /* Info.plist */,
+				78CAF9B34A28264B1AD9202A1B67D8A9 /* Pods-VideoSplashDemoTests.modulemap */,
+				0EBE3041B8C25AACF1950E93A7F20D6D /* Pods-VideoSplashDemoTests-acknowledgements.markdown */,
+				34A5764E90791F3EEA1F9D71906A7832 /* Pods-VideoSplashDemoTests-acknowledgements.plist */,
+				FE3C76AC2FD74E743C87D396A7ECBA38 /* Pods-VideoSplashDemoTests-dummy.m */,
+				3B99438E449EF70DEE9791626A718264 /* Pods-VideoSplashDemoTests-frameworks.sh */,
+				516C360CED4B87B46AAE15CFC6BEEB3D /* Pods-VideoSplashDemoTests-resources.sh */,
+				640D102A5CB51AB0A3AE39DE034CB1FB /* Pods-VideoSplashDemoTests-umbrella.h */,
+				6BD94718C8CD75EE699139612AB9513B /* Pods-VideoSplashDemoTests.debug.xcconfig */,
+				3CAC8B5F20E8987311A5A07E46FB2FDA /* Pods-VideoSplashDemoTests.release.xcconfig */,
+			);
+			name = "Pods-VideoSplashDemoTests";
+			path = "Target Support Files/Pods-VideoSplashDemoTests";
+			sourceTree = "<group>";
+		};
+		8DB93F6F052A5D08E9B0F070E1187D12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9F9131C6DAA45F67F59E388D6E1C774 /* VideoSplash */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F0E3B0CA61C58A33D7F570B0B6DA8E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54595075E237AF1DBFC29CF9521241FC /* Pods_VideoSplashDemo.framework */,
+				DB1DE2646F8AFB91747E070166EF2C6F /* Pods_VideoSplashDemoTests.framework */,
+				782CA2A791DA19521F8C65F0E1F42A39 /* VideoSplash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9F9131C6DAA45F67F59E388D6E1C774 /* VideoSplash */ = {
+			isa = PBXGroup;
+			children = (
+				76A61AD0031F5E552E82AABE361D6C0B /* VideoCutter.swift */,
+				2DF6211FBB6B7020A6F10DBB26CD5067 /* VideoSplashViewController.swift */,
+				D8357CF1DFF3F780F670262F07E31A6C /* Support Files */,
+			);
+			path = VideoSplash;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D8357CF1DFF3F780F670262F07E31A6C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72620C043792F9C745D13A9156E588AC /* Info.plist */,
+				A08B0259E561E0CF13FC9EB6DC469EBC /* VideoSplash.modulemap */,
+				ACECA9BA0557B339DC7853DCD3B7BCBC /* VideoSplash.xcconfig */,
+				453F21E70512004B5DDDD49ADB69526F /* VideoSplash-dummy.m */,
+				E6A4ABA178D3EF7E86403EA525E0FE21 /* VideoSplash-prefix.pch */,
+				89548641CBF8025BBA5B18E56FE4B913 /* VideoSplash-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VideoSplash";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		085D6E24B4148A83FA5EEA5AEE173286 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97668DCC5A15DD48459F2DA99267646D /* Pods-VideoSplashDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232831A844061936D85DCC6AE0C8BF4B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A02CFD8FC226FD138D70E6D39A7342 /* Pods-VideoSplashDemoTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4407CCEC3E848D7FD1FA4AF87CC2BE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86BA3F6256AF98637ADFA901F97E28A0 /* VideoSplash-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23EF9E27BEB06BF1949CED690A1AEC84 /* Pods-VideoSplashDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8619E5F04D2843821593DE6F03D38BA8 /* Build configuration list for PBXNativeTarget "Pods-VideoSplashDemoTests" */;
+			buildPhases = (
+				8942B2929AB2E4EF7D632B43C2C61AD4 /* Sources */,
+				4B36B2557881D6B2DDC839BECF43AD6A /* Frameworks */,
+				232831A844061936D85DCC6AE0C8BF4B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F69CEECC974D84E7C0955214FEF03B5 /* PBXTargetDependency */,
+			);
+			name = "Pods-VideoSplashDemoTests";
+			productName = "Pods-VideoSplashDemoTests";
+			productReference = DB1DE2646F8AFB91747E070166EF2C6F /* Pods_VideoSplashDemoTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9B6F6ADF794CCF87331F3D8E41654BE3 /* Pods-VideoSplashDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E256895026F0CB5AB9BAB614E5143338 /* Build configuration list for PBXNativeTarget "Pods-VideoSplashDemo" */;
+			buildPhases = (
+				BC7187DFE6024BE257ED55BACB31A87A /* Sources */,
+				E400607509F289A0B8BE3EF09B868E7B /* Frameworks */,
+				085D6E24B4148A83FA5EEA5AEE173286 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A2B16391630CA2F2C334011DAD87346 /* PBXTargetDependency */,
+			);
+			name = "Pods-VideoSplashDemo";
+			productName = "Pods-VideoSplashDemo";
+			productReference = 54595075E237AF1DBFC29CF9521241FC /* Pods_VideoSplashDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5FD2186ED2EF4188D01A7210F1D01F1 /* VideoSplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55F77A6D6EAFEA4E2FD536181D60A463 /* Build configuration list for PBXNativeTarget "VideoSplash" */;
+			buildPhases = (
+				A8B98D0AC1E4F3732F05C22969F7766F /* Sources */,
+				E06E9471671C7A70E33DAEA5A37057B1 /* Frameworks */,
+				B4407CCEC3E848D7FD1FA4AF87CC2BE2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoSplash;
+			productName = VideoSplash;
+			productReference = 782CA2A791DA19521F8C65F0E1F42A39 /* VideoSplash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8F0E3B0CA61C58A33D7F570B0B6DA8E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B6F6ADF794CCF87331F3D8E41654BE3 /* Pods-VideoSplashDemo */,
+				23EF9E27BEB06BF1949CED690A1AEC84 /* Pods-VideoSplashDemoTests */,
+				E5FD2186ED2EF4188D01A7210F1D01F1 /* VideoSplash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8942B2929AB2E4EF7D632B43C2C61AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81418AB26387AFB533D222B11B2E425 /* Pods-VideoSplashDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B98D0AC1E4F3732F05C22969F7766F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8579AB7BD82A0535A8A2DE9A67C0AE /* VideoCutter.swift in Sources */,
+				30C965E02A5D314822BC1C86C8B3F100 /* VideoSplash-dummy.m in Sources */,
+				B723447E5145C3759724D17E6419B914 /* VideoSplashViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC7187DFE6024BE257ED55BACB31A87A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70558530869817B209395A16B0E3088E /* Pods-VideoSplashDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F69CEECC974D84E7C0955214FEF03B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VideoSplash;
+			target = E5FD2186ED2EF4188D01A7210F1D01F1 /* VideoSplash */;
+			targetProxy = B35A7043E869245CFDED5A8421536960 /* PBXContainerItemProxy */;
+		};
+		7A2B16391630CA2F2C334011DAD87346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VideoSplash;
+			target = E5FD2186ED2EF4188D01A7210F1D01F1 /* VideoSplash */;
+			targetProxy = 7A424AF1148FFB36897405BF06203BAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AA33F9FF24459EB2A6B0A0FC756FDA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96E741507C521977FE1601ED301572A5 /* Pods-VideoSplashDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VideoSplashDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VideoSplashDemo/Pods-VideoSplashDemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VideoSplashDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		30DF30D443AA8755AAB9C3E0E4A5E1AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CAC8B5F20E8987311A5A07E46FB2FDA /* Pods-VideoSplashDemoTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VideoSplashDemoTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VideoSplashDemoTests/Pods-VideoSplashDemoTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VideoSplashDemoTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AEB956287E5D775A530ED2213E305A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD94718C8CD75EE699139612AB9513B /* Pods-VideoSplashDemoTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VideoSplashDemoTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VideoSplashDemoTests/Pods-VideoSplashDemoTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VideoSplashDemoTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A083C6231607DF363C173B976729F2BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACECA9BA0557B339DC7853DCD3B7BCBC /* VideoSplash.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VideoSplash/VideoSplash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VideoSplash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VideoSplash/VideoSplash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VideoSplash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA1B5336CFCFCA68A15660034251B672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACECA9BA0557B339DC7853DCD3B7BCBC /* VideoSplash.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VideoSplash/VideoSplash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VideoSplash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VideoSplash/VideoSplash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VideoSplash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1B1DA8B3D13297A17F8B6BA934B9EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0686F522B2901B7DBD21C27B08BEE44E /* Pods-VideoSplashDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VideoSplashDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VideoSplashDemo/Pods-VideoSplashDemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VideoSplashDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55F77A6D6EAFEA4E2FD536181D60A463 /* Build configuration list for PBXNativeTarget "VideoSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA1B5336CFCFCA68A15660034251B672 /* Debug */,
+				A083C6231607DF363C173B976729F2BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8619E5F04D2843821593DE6F03D38BA8 /* Build configuration list for PBXNativeTarget "Pods-VideoSplashDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AEB956287E5D775A530ED2213E305A9 /* Debug */,
+				30DF30D443AA8755AAB9C3E0E4A5E1AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E256895026F0CB5AB9BAB614E5143338 /* Build configuration list for PBXNativeTarget "Pods-VideoSplashDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B1DA8B3D13297A17F8B6BA934B9EB8 /* Debug */,
+				1AA33F9FF24459EB2A6B0A0FC756FDA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

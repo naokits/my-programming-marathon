@@ -1,0 +1,10 @@
+PODS:
+  - VideoSplash (1.0.9)
+
+DEPENDENCIES:
+  - VideoSplash
+
+SPEC CHECKSUMS:
+  VideoSplash: b862d41726b22fefd47ffe845c0524616cf5ab0e
+
+COCOAPODS: 0.39.0
