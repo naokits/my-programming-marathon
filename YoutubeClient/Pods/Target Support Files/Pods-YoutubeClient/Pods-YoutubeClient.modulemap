@@ -1,0 +1,6 @@
+framework module Pods_YoutubeClient {
+  umbrella header "Pods-YoutubeClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
