@@ -9,7 +9,42 @@
 - ホームスクリーンからアプリアイコンをフォースタッチすることで、クイックアクションメニューが表示される。
 - クイックアクションメニューから任意の項目を選択すると、その内容に応じてアラートメッセージを表示する。
 
-Static
+スタティックアクションを実装するために `Info.plist` に次の内容を追加する。
+`UIApplicationShortcutItemIconFile` に指定しているアイコン画像 `open-favorites` は別途用意してプロジェクトに追加する。
+アイコン画像のサイズが現時点でわからないので、調べておく。
+
+```xml
+<key>UIApplicationShortcutItems</key>
+<array>
+  <dict>
+    <key>UIApplicationShortcutItemIconFile</key>
+    <string>open-favorites</string>
+    <key>UIApplicationShortcutItemTitle</key>
+    <string>ショートカットタイトル1</string>
+    <key>UIApplicationShortcutItemType</key>
+    <string>com.nkapp.3DTouchDemo.shortcutTitle1</string>
+    <key>UIApplicationShortcutItemUserInfo</key>
+    <dict>
+      <key>key1</key>
+      <string>value1</string>
+    </dict>
+  </dict>
+  <dict>
+    <key>UIApplicationShortcutItemIconType</key>
+    <string>UIApplicationShortcutIconTypeCompose</string>
+    <key>UIApplicationShortcutItemTitle</key>
+    <string>ショートカットタイトル2</string>
+    <key>UIApplicationShortcutItemType</key>
+    <string>com.nkapp.3DTouchDemo.shortcutTitle2</string>
+    <key>UIApplicationShortcutItemUserInfo</key>
+    <dict>
+      <key>key2</key>
+      <string>value2</string>
+    </dict>
+  </dict>
+</array>
+```
+
 
 
 ## 動作確認環境
