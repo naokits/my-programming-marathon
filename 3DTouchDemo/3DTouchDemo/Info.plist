@@ -50,7 +50,7 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string>open-favorites</string>
+			<string>Quick-Action-Menu</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Favorites</string>
 			<key>UIApplicationShortcutItemType</key>
