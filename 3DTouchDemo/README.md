@@ -58,3 +58,4 @@
 - [Adopting 3D Touch on iPhone: Getting Started with 3D Touch](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/)
 - [iOS Human Interface Guidelines: 3D Touch](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/3DTouch.html#//apple_ref/doc/uid/TP40006556-CH71)
 - [ApplicationShortcuts: Using UIApplicationShortcutItem](https://developer.apple.com/library/ios/samplecode/ApplicationShortcuts/Introduction/Intro.html#//apple_ref/doc/uid/TP40016545)
+- [UIApplicationShortcutIconType - UIApplicationShortcutIcon Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/index.html#//apple_ref/c/tdef/UIApplicationShortcutIconType)
