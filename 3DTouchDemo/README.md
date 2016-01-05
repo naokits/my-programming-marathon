@@ -50,7 +50,10 @@
 `UIApplicationShortcutItemIconFile` に指定しているカスタムアイコン画像 `Quick-Action-Menu` は別途用意してプロジェクトに追加する。
  PSDフォーマットのサンプルアイコンが [ここ](https://developer.apple.com/design/downloads/Quick-Action-Guides.zip) からダウンロードできる。
 
+### 重要なクラス
 
+- UIApplicationShortcutItem
+- UIMutableApplicationShortcutItem
 
 ## 動作確認環境
 - OS X EI Capitan 10.11.1 (15B42)
@@ -58,7 +61,6 @@
 - iPhone 6s Plus
 
 ## 関連情報
-
 
 - [3D Touch - iOS - Apple Developer](https://developer.apple.com/ios/3d-touch/)
 - [Adopting 3D Touch on iPhone: Getting Started with 3D Touch](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/)
@@ -68,4 +70,11 @@
 
 ## TODO
 
-- 用語がややこしいので整理する
+用語がややこしいので整理する
+
+- static shortcuts
+- dynamic shortcuts
+- static quick actions
+- dynamic quick actions
+- peek
+- poke
