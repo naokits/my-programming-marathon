@@ -55,8 +55,8 @@ class MasterViewController: UITableViewController {
         }
         
         
-        print("staticShortcuts: \(staticShortcuts)")
-        print("dynamicShortcuts: \(dynamicShortcuts)")
+        print("静的ショートカットの配列: \(staticShortcuts)")
+        print("動的ショートカットの配列: \(dynamicShortcuts)")
     }
 
     override func viewWillAppear(animated: Bool) {
