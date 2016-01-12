@@ -5,7 +5,8 @@ import SystemConfiguration.CaptiveNetwork
 /// iOS9未満の場合（ただし、iOS9以上ではDeprecatedなAPIを使用）
 /// CNCopySupportedInterfaces, CNCopyCurrentNetworkInfo
 /// iOS9.2上でも一応動作する
-func retrieveWifiNetwork() {
+/// http://qiita.com/naokits/items/aa16e1553880c7ddbfbf
+func printRetrievedWifiNetwork() {
     guard let interfaces:CFArray! = CNCopySupportedInterfaces() else {
         return
     }
