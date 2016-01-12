@@ -4,21 +4,25 @@ import SystemConfiguration.CaptiveNetwork
 /// 有効なWiFiネットワーク情報をすべて取得して、結果をコンソールに表示する
 /// iOS9未満の場合（ただし、iOS9以上ではDeprecatedなAPIを使用）
 /// CNCopySupportedInterfaces, CNCopyCurrentNetworkInfo
+/// iOS9.2上でも一応動作する
 func retrieveWifiNetwork() {
-    let interfaces:CFArray! = CNCopySupportedInterfaces()
+    guard let interfaces:CFArray! = CNCopySupportedInterfaces() else {
+        return
+    }
     print("interfaces: \(interfaces)")
-
+    
     for i in 0..<CFArrayGetCount(interfaces) {
-        let interfaceName: UnsafePointer<Void> = CFArrayGetValueAtIndex(interfaces, i)
-        let rec = unsafeBitCast(interfaceName, AnyObject.self)
-        let unsafeInterfaceData = CNCopyCurrentNetworkInfo("\(rec)")
-        var ssid = ""
-        if unsafeInterfaceData != nil {
-            let interfaceData = unsafeInterfaceData! as Dictionary!
-            ssid = interfaceData["SSID"] as! String
-        } else {
-            ssid = ""
+        guard let interfaceName: UnsafePointer<Void> = CFArrayGetValueAtIndex(interfaces, i) else {
+            continue
         }
-        print("currentSSID: \(ssid)")
+        let rec = unsafeBitCast(interfaceName, AnyObject.self)
+        guard let unsafeInterfaceData = CNCopyCurrentNetworkInfo("\(rec)") else {
+            continue
+        }
+        guard let interfaceData = unsafeInterfaceData as Dictionary! else {
+            continue
+        }
+        print("SSID: \(interfaceData["SSID"] as! String)")
+        print("BSSID: \(interfaceData["BSSID"] as! String)")
     }
 }
