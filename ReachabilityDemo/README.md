@@ -1,6 +1,6 @@
 # ReachabilityDemo
 
-Appleが提供しているObjective-C版の`Reachability`ではなく、サードパーティの`ReachabilityDemo`を使用したネットワーク接続状態をチェックするデモアプリ。
+Appleが提供しているObjective-C版の`Reachability`ではなく、サードパーティの`Reachability.swift`を使用したネットワーク接続状態をチェックするデモアプリ。
 
 ## 概要[WIP]
 
