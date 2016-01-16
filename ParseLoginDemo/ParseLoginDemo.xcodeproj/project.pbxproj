@@ -18,6 +18,9 @@
 		12B44F231C48FABA00D48219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B44F211C48FABA00D48219 /* LaunchScreen.storyboard */; };
 		12B44F2E1C48FABA00D48219 /* ParseLoginDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B44F2D1C48FABA00D48219 /* ParseLoginDemoTests.swift */; };
 		12B44F391C48FABA00D48219 /* ParseLoginDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B44F381C48FABA00D48219 /* ParseLoginDemoUITests.swift */; };
+		12DC84671C4A4EE300B4CC9F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC84661C4A4EE300B4CC9F /* Location.swift */; };
+		12DC84681C4A4EE300B4CC9F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC84661C4A4EE300B4CC9F /* Location.swift */; };
+		12DC84691C4A4EE300B4CC9F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC84661C4A4EE300B4CC9F /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		12B44F341C48FABA00D48219 /* ParseLoginDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseLoginDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B44F381C48FABA00D48219 /* ParseLoginDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseLoginDemoUITests.swift; sourceTree = "<group>"; };
 		12B44F3A1C48FABA00D48219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DC84661C4A4EE300B4CC9F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		60C8D788D6CEF9B83FC5C652 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6FA8BDB9804EA1BDDFDF5C1F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FDC10F91B37887B05A51DB64 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,11 +114,12 @@
 			children = (
 				12B44F181C48FABA00D48219 /* AppDelegate.swift */,
 				12B44F1A1C48FABA00D48219 /* ViewController.swift */,
+				12DC84661C4A4EE300B4CC9F /* Location.swift */,
+				1268CE6C1C4A05BA00C2835A /* Config.swift */,
 				12B44F1C1C48FABA00D48219 /* Main.storyboard */,
 				12B44F1F1C48FABA00D48219 /* Assets.xcassets */,
 				12B44F211C48FABA00D48219 /* LaunchScreen.storyboard */,
 				12B44F241C48FABA00D48219 /* Info.plist */,
-				1268CE6C1C4A05BA00C2835A /* Config.swift */,
 			);
 			path = ParseLoginDemo;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12DC84671C4A4EE300B4CC9F /* Location.swift in Sources */,
 				12B44F1B1C48FABA00D48219 /* ViewController.swift in Sources */,
 				12B44F191C48FABA00D48219 /* AppDelegate.swift in Sources */,
 				1268CE6D1C4A05BA00C2835A /* Config.swift in Sources */,
@@ -348,6 +354,7 @@
 			files = (
 				12B44F2E1C48FABA00D48219 /* ParseLoginDemoTests.swift in Sources */,
 				1268CE6E1C4A05BA00C2835A /* Config.swift in Sources */,
+				12DC84681C4A4EE300B4CC9F /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +364,7 @@
 			files = (
 				12B44F391C48FABA00D48219 /* ParseLoginDemoUITests.swift in Sources */,
 				1268CE6F1C4A05BA00C2835A /* Config.swift in Sources */,
+				12DC84691C4A4EE300B4CC9F /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

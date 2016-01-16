@@ -53,9 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupParse() {
         Parse.setApplicationId(applicationId, clientKey: clientKey)
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackground()
+//        let testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.saveInBackground()
     }
 }
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 import ParseUI
 
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
@@ -19,8 +18,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-        signup()
+        
+        guard let currentUser = PFUser.currentUser() else {
+            login()
+            return
+        }
+        
+        print("ログイン中のユーザ: \(currentUser)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +41,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     func login() {
         let controller = PFLogInViewController()
+//        controller.logInView?.logo = UIImageView(image: UIImage(named: ""))
         controller.delegate = self
         self.presentViewController(controller, animated:true, completion: nil)
     }
@@ -52,6 +57,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         print("サインアップ成功: \(user)")
+        
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, shouldBeginSignUp info: [String : String]) -> Bool {
@@ -66,19 +72,41 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // MARK:- PFLogInViewControllerDelegate
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
-        //
+        guard let e = error else {
+            return
+        }
+        print("ログインエラー: \(e)")
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
-        //
+        print("ログイン成功: \(user)")
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
+        print("Info: \(username)")
         return true
     }
 
     func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
-        //
+        print("ログインがキャンセルされた")
+    }
+    
+    // MARK:- Location
+
+    func saveCurrentLocation() {
+        let location = Location()
+        location.japaneseDate = NSDate()
+        location.geo = PFGeoPoint(latitude: 0.0, longitude: 0.0)
+        location.saveInBackground().continueWithBlock { (task) -> AnyObject? in
+            if let error = task.error {
+                print("保存失敗: \(error)")
+            } else {
+                print("保存成功")
+            }
+            return nil
+        }
     }
 }
 
