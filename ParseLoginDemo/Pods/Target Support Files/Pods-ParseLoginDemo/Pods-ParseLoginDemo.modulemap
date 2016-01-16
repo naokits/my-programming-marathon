@@ -1,0 +1,6 @@
+framework module Pods_ParseLoginDemo {
+  umbrella header "Pods-ParseLoginDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
