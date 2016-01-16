@@ -14,4 +14,6 @@ Parse.comが提供している独自ログインを行うデモアプリ
 ## 関連情報
 
 - [Parse](https://www.parse.com/docs/ios/guide)
+- [iOS Developers Guide | Parse](https://www.parse.com/docs/ios/guide)
 - [ParsePlatform/Parse-SDK-iOS-OSX: Parse SDK for iOS/OS X](https://github.com/ParsePlatform/parse-sdk-ios-osx)
+- [ParsePlatform/ParseUI-iOS: A collection of a handy user interface components to be used with the Parse iOS SDK.](https://github.com/ParsePlatform/ParseUI-iOS)
