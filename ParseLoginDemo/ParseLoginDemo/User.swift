@@ -1,22 +1,19 @@
 //
-//  Location
+//  User.swift
 //  ParseLoginDemo
 //
-//  Created by Naoki Tsutsui on 1/16/16.
+//  Created by Naoki Tsutsui on 1/17/16.
 //  Copyright © 2016 Naoki Tsutsui. All rights reserved.
 //
 
-//import Foundation
 import Parse
 
-public class Location: PFObject, PFSubclassing {
+public class User: PFUser {
+    @NSManaged var currentLocation: PFGeoPoint
     @NSManaged var japaneseDate: NSDate
-    @NSManaged var lat: Double
-    @NSManaged var lng: Double
-    @NSManaged var geo: PFGeoPoint
-
+    
     // MARK: - Initialize
-
+    
     override init() {
         super.init()
     }
@@ -32,7 +29,7 @@ public class Location: PFObject, PFSubclassing {
         }
     }
     
-    public static func parseClassName() -> String {
-        return "Location"
+    public override static func parseClassName() -> String {
+        return "User"
     }
 }

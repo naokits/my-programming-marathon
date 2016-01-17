@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E239DEDB7A2C2C6AA56572B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC10F91B37887B05A51DB64 /* Pods.framework */; };
+		12383C4F1C4BC1BA0030BE8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12383C4E1C4BC1BA0030BE8E /* User.swift */; };
 		1268CE6D1C4A05BA00C2835A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268CE6C1C4A05BA00C2835A /* Config.swift */; };
 		1268CE6E1C4A05BA00C2835A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268CE6C1C4A05BA00C2835A /* Config.swift */; };
 		1268CE6F1C4A05BA00C2835A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1268CE6C1C4A05BA00C2835A /* Config.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12383C4E1C4BC1BA0030BE8E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1268CE6C1C4A05BA00C2835A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		12B44F151C48FABA00D48219 /* ParseLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B44F181C48FABA00D48219 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				12B44F181C48FABA00D48219 /* AppDelegate.swift */,
 				12B44F1A1C48FABA00D48219 /* ViewController.swift */,
 				12DC84661C4A4EE300B4CC9F /* Location.swift */,
+				12383C4E1C4BC1BA0030BE8E /* User.swift */,
 				1268CE6C1C4A05BA00C2835A /* Config.swift */,
 				12B44F1C1C48FABA00D48219 /* Main.storyboard */,
 				12B44F1F1C48FABA00D48219 /* Assets.xcassets */,
@@ -344,6 +347,7 @@
 				12DC84671C4A4EE300B4CC9F /* Location.swift in Sources */,
 				12B44F1B1C48FABA00D48219 /* ViewController.swift in Sources */,
 				12B44F191C48FABA00D48219 /* AppDelegate.swift in Sources */,
+				12383C4F1C4BC1BA0030BE8E /* User.swift in Sources */,
 				1268CE6D1C4A05BA00C2835A /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
