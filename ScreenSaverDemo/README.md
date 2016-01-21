@@ -8,8 +8,8 @@ OS Xのスクリーンセーバーのデモ
 
 - インターネットに接続している場合
     - 指定されたURLの内容を、指定された時間表示する
-    - URLはParse.comのDBから取得する
-    - 各サイトの表示時間はParse.comから取得する
+    - URLはコード埋め込みか、 `ScreenSaver Options` で指定できるようにする
+    - 表示時間は固定で120秒、できれば `ScreenSaver Options` で指定できるようにしたい
 - インターネットに接続していない場合
     - 組み込みのHTMLの内容を表示する
 
@@ -21,7 +21,12 @@ OS Xのスクリーンセーバーのデモ
 ## 関連情報
 
 - [Screen Saver Framework Reference](https://developer.apple.com/library/mac/documentation/UserExperience/Reference/ScreenSaver/ObjC_classic/index.html#//apple_ref/doc/uid/20001822)
+- [ScreenSaver Changes for Swift](https://developer.apple.com/library/prerelease/mac/releasenotes/General/APIDiffsMacOSX10_11/Swift/ScreenSaver.html)
+- [Screen Savers - Part 1 - NSScreencast](http://nsscreencast.com/episodes/182-screen-savers-part-1)
+- [Screen Savers Part 2 - NSScreencast](http://nsscreencast.com/episodes/183-screen-savers-part-2)
+- [Mac OSXスクリーンセーバーをSwiftで作成する - Qiita](http://qiita.com/kaneshin/items/cab5132517f6902824e3)
 
 ## その他
 
-- 使用するParseのAPIキーは、 `ParseLoginDemo` と同じものを使用する
+- とりあえずObjective-Cで記述するが、できればSwiftに変更する
+- デバッグができないか調査する
