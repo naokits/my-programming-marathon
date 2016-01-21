@@ -19,12 +19,15 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        guard let currentUser = PFUser.currentUser() else {
+        guard let currentUser = User.currentUser() else {
             login()
             return
         }
         
         print("ログイン中のユーザ: \(currentUser)")
+
+        currentUser.japaneseDate = NSDate()
+        currentUser.saveInBackground()
     }
 
     override func didReceiveMemoryWarning() {
