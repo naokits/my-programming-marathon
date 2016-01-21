@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		121DCB4C1C4F8004001CD3E1 /* ScreenSaverDemoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 121DCB4B1C4F8004001CD3E1 /* ScreenSaverDemoView.h */; };
 		121DCB4E1C4F8004001CD3E1 /* ScreenSaverDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121DCB4D1C4F8004001CD3E1 /* ScreenSaverDemoView.m */; };
+		12ECB6DC1C512E540012BD2A /* html in Resources */ = {isa = PBXBuildFile; fileRef = 12ECB6DB1C512E540012BD2A /* html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		121DCB4B1C4F8004001CD3E1 /* ScreenSaverDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenSaverDemoView.h; sourceTree = "<group>"; };
 		121DCB4D1C4F8004001CD3E1 /* ScreenSaverDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenSaverDemoView.m; sourceTree = "<group>"; };
 		121DCB4F1C4F8004001CD3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12ECB6DB1C512E540012BD2A /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				121DCB4B1C4F8004001CD3E1 /* ScreenSaverDemoView.h */,
 				121DCB4D1C4F8004001CD3E1 /* ScreenSaverDemoView.m */,
 				121DCB4F1C4F8004001CD3E1 /* Info.plist */,
+				12ECB6DB1C512E540012BD2A /* html */,
 			);
 			path = ScreenSaverDemo;
 			sourceTree = "<group>";
@@ -77,6 +80,7 @@
 				121DCB441C4F8003001CD3E1 /* Frameworks */,
 				121DCB451C4F8003001CD3E1 /* Headers */,
 				121DCB461C4F8003001CD3E1 /* Resources */,
+				12ECB6DA1C5122410012BD2A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -123,10 +127,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12ECB6DC1C512E540012BD2A /* html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12ECB6DA1C5122410012BD2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "open -W \"${CODESIGNING_FOLDER_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		121DCB431C4F8003001CD3E1 /* Sources */ = {
@@ -262,6 +283,7 @@
 				121DCB541C4F8004001CD3E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
