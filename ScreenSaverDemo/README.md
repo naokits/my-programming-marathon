@@ -26,6 +26,22 @@ OS Xのスクリーンセーバーのデモ
 - [Screen Savers Part 2 - NSScreencast](http://nsscreencast.com/episodes/183-screen-savers-part-2)
 - [Mac OSXスクリーンセーバーをSwiftで作成する - Qiita](http://qiita.com/kaneshin/items/cab5132517f6902824e3)
 
+## 注意事項
+
+> import Foundation
+
+が含まれていると、
+
+> You cannot use the screensaver with this version of OS X.
+> Please contact the vendor to get a newer version of the screen saver.
+
+とビルドしたスクリーンセーバーに表示されてしまうので注意する。
+
+上記のメッセージが表示される場合は、 `info.plist` の `Principal class` の値（クラス名）が正しいか、
+`Build Settings` の `EMBEDDED CONTENT CONTAINS SWIFT` が `YES` になっているかを確認する。
+
+
+
 ## その他
 
 - とりあえずObjective-Cで記述するが、できればSwiftに変更する

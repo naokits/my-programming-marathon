@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		121DCB4C1C4F8004001CD3E1 /* ScreenSaverDemoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 121DCB4B1C4F8004001CD3E1 /* ScreenSaverDemoView.h */; };
-		121DCB4E1C4F8004001CD3E1 /* ScreenSaverDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121DCB4D1C4F8004001CD3E1 /* ScreenSaverDemoView.m */; };
+		12B16E1A1C5650C70022F79C /* ScreenSaverDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B16E191C5650C70022F79C /* ScreenSaverDemo.swift */; };
 		12ECB6DC1C512E540012BD2A /* html in Resources */ = {isa = PBXBuildFile; fileRef = 12ECB6DB1C512E540012BD2A /* html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		121DCB481C4F8003001CD3E1 /* ScreenSaverDemo.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenSaverDemo.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		121DCB4B1C4F8004001CD3E1 /* ScreenSaverDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenSaverDemoView.h; sourceTree = "<group>"; };
-		121DCB4D1C4F8004001CD3E1 /* ScreenSaverDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenSaverDemoView.m; sourceTree = "<group>"; };
 		121DCB4F1C4F8004001CD3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B16E191C5650C70022F79C /* ScreenSaverDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSaverDemo.swift; sourceTree = "<group>"; };
+		12B16E1B1C5653170022F79C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		12ECB6DB1C512E540012BD2A /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -34,6 +33,7 @@
 		121DCB3E1C4F8003001CD3E1 = {
 			isa = PBXGroup;
 			children = (
+				12B16E1B1C5653170022F79C /* README.md */,
 				121DCB4A1C4F8003001CD3E1 /* ScreenSaverDemo */,
 				121DCB491C4F8003001CD3E1 /* Products */,
 			);
@@ -50,8 +50,7 @@
 		121DCB4A1C4F8003001CD3E1 /* ScreenSaverDemo */ = {
 			isa = PBXGroup;
 			children = (
-				121DCB4B1C4F8004001CD3E1 /* ScreenSaverDemoView.h */,
-				121DCB4D1C4F8004001CD3E1 /* ScreenSaverDemoView.m */,
+				12B16E191C5650C70022F79C /* ScreenSaverDemo.swift */,
 				121DCB4F1C4F8004001CD3E1 /* Info.plist */,
 				12ECB6DB1C512E540012BD2A /* html */,
 			);
@@ -65,7 +64,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121DCB4C1C4F8004001CD3E1 /* ScreenSaverDemoView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121DCB4E1C4F8004001CD3E1 /* ScreenSaverDemoView.m in Sources */,
+				12B16E1A1C5650C70022F79C /* ScreenSaverDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,11 +241,15 @@
 		121DCB531C4F8004001CD3E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ScreenSaverDemo/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nkapp.ScreenSaverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -255,9 +257,12 @@
 		121DCB541C4F8004001CD3E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ScreenSaverDemo/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nkapp.ScreenSaverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
