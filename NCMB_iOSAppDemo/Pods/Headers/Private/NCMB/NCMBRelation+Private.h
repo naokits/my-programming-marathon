@@ -1,0 +1,1 @@
+../../../NCMB/NCMB/PrivateHeaders/NCMBRelation+Private.h
