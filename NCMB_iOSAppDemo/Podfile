@@ -1,0 +1,35 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+# use_frameworks!
+# inhibit_all_warnings!
+
+# link_with 'PH4J', 'PH4JTests'
+
+target "NCMB_iOSAppDemo" do
+  pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
+  pod 'SDWebImage'
+end
+
+# Parse
+# pod 'Parse'
+# pod 'ParseUI'
+# pod 'ParseFacebookUtilsV4'
+# pod 'ParseCrashReporting'
+# pod 'AsyncDisplayKit'
+
+# Facebook
+ # pod 'FBSDKCoreKit'
+ # pod 'FBSDKLoginKit'
+ # pod 'FBSDKShareKit'
+ # pod 'FBSDKMessengerShareKit'
+
+# target :PH4JTests, :exclusive => true do
+#   # pod 'FBSnapshotTestCase'
+# end
+
+# pod 'SwiftyJSON'
+# pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git', :branch => 'xcode7'
+ # pod 'XCGLogger'
+
+# UI
+# pod 'SVProgressHUD', '~> 1.1'

@@ -1,0 +1,1 @@
+../../../NCMB/NCMB/NCMBGeoPoint.h
