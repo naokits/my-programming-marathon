@@ -1,0 +1,33 @@
+{
+  "name": "ncmb",
+  "version": "2.0.2",
+  "homepage": "http://mb.cloud.nifty.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIFTYCloud-mbaas/ncmb_js"
+  },
+  "description": "JavaScript SDK for NiftyCloud mobile backend",
+  "main": "ncmb.min.js",
+  "keywords": [
+    "mbaas",
+    "parse",
+    "development",
+    "sdk",
+    "smartphone",
+    "tool",
+    "pushnotification"
+  ],
+  "license": "Apache License Version 2.0",
+  "ignore": [
+    "coverage",
+    "scratch/",
+     "**/.*",
+    "node_modules",
+    "bower_components",
+    "config",
+    "lib",
+    "test",
+    "CONTRIBUTING.md",
+    "package.json"
+  ]
+}

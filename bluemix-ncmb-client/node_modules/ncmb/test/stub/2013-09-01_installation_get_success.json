@@ -1,0 +1,14 @@
+{"results":[{
+  "objectId":"41My7ovRtgHflLeX",
+  "applicationName":"test_spp",
+  "appVersion":"1.0",
+  "badge":0,
+  "channels":[],
+  "deviceToken":"bUZabxaQK6s:APA91bE6y54KKw85o-Zdk0lkwDDP0RD6grUGjnMpzrh33LAoz-VzIj6L20IyvuwW17YL6FfvS9wLIu-G0CHPrNMxt0yVJ_htk33awEw3nPBltpTz5rEbplFnfFGF-9Qvw-M5NmNVW1Zt",
+  "deviceType":"android",
+  "sdkVersion":"2.0.0",
+  "timeZone":"Asia/Tokyo",
+  "createDate":"2015-09-29T01:44:13.524Z",
+  "updateDate":"2015-10-01T08:31:50.956Z",
+  "acl":{"*":{"read":true,"write":true}}
+}]}

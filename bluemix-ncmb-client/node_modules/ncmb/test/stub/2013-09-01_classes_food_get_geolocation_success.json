@@ -1,0 +1,2 @@
+{"results":[{"objectId":"geolocation_object_id","createDate":"2015-02-25T08:02:35.470Z","updateDate":"2015-02-25T08:02:35.471Z","acl":{"*":{"read":true,"write":true}},"geoLocation":{"__type":"GeoPoint","longitude":133,"latitude":12}}]}
+

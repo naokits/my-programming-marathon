@@ -7,10 +7,11 @@
 	},
 	"dependencies": {
 		"express": "4.12.x",
-		"cfenv": "1.0.x"
+		"cfenv": "1.0.x",
+		"ncmb": "2.0.x"
 	},
 	"repository": {},
 	"engines": {
 		"node": "0.12.x"
-	} 
+	}
 }
