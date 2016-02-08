@@ -117,26 +117,3 @@ app.listen(appEnv.port, '0.0.0.0', function () {
 
     console.log("Express server starting on %s in %s mode", appEnv.url, app.settings.env);
 });
-
-/**
- *  Define the sample application.
- */
-var MoveApp = function () {
-
-    //  Scope.
-    var self = this;
-
-    /**
-     *  Start the server (starts up the sample application).
-     */
-    self.start = function () {
-        //  Start the app on the specific interface (and port).
-        self.app.listen(self.port, self.ipaddress, function () {
-            console.log('%s: Node server started on %s:%d ...',
-                Date(Date.now()), self.ipaddress, self.port);
-        });
-    };
-
-};
-
-var zapp = new MoveApp();
