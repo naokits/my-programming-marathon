@@ -33,19 +33,41 @@ class MasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        if let user = NCMBUser.currentUser() {
-            print("ログイン中: \(user)")
-            search2()
-        } else {
-            print("ログインしていない")
-            signup()
-        }
-        setupLocation()
+
+        
+//        if let user = NCMBUser.currentUser() {
+//            print("ログイン中: \(user)")
+//            search2()
+//        } else {
+//            print("ログインしていない")
+//            signup()
+//        }
+//        setupLocation()
     }
 
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if let user = NCMBUser.currentUser() {
+            print("ログイン中: \(user)")
+            search2()
+        } else {
+            print("ログインしていない")
+//            signup()
+            
+            // とりあえず、通常通りに宣言
+            let name = "Main"
+            let identifier = "Login"
+            let storyboard = UIStoryboard(name: name, bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier(identifier) as! LoginViewController
+            self.navigationController?.presentViewController(viewController, animated: true, completion: nil)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
