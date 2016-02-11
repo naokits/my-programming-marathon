@@ -14,7 +14,7 @@ func openSettingApp(application: UIApplication) {
     UIApplication.sharedApplication().openURL(url)
 }
 
-// 現在、許可しているかどうかこれでチェック
+// 現在、許可しているかどうか
 //func isEnabled() -> Bool {
 //    return (UIApplication.sharedApplication().currentUserNotificationSettings()!.types & UIUserNotificationType.Alert) != nil
 //}

@@ -6,11 +6,9 @@
 //  Copyright © 2016 Naoki Tsutsui. All rights reserved.
 //
 
-import Foundation
 import NCMB
 
-@objc(Location) // <-- 以前はこの宣言をしないと、ハングアップしていた
-
+@objc(Location)
 public class Location: NCMBObject, NCMBSubclassing {
 
     var latitude: Double {

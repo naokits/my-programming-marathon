@@ -6,7 +6,6 @@
 //  Copyright © 2016 Naoki Tsutsui. All rights reserved.
 //
 
-import Foundation
 import NCMB
 
 //@objc(User) // <-- 以前はこの宣言をしないと、ハングアップしていた
