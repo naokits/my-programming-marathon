@@ -1,1 +1,0 @@
-../../../NCMB/NCMB/NCMBConstants.h

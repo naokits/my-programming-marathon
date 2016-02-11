@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import NCMB
 
 class MasterViewController: UITableViewController {
 
     // MARK: - Properties
     
     let locationManager = CLLocationManager()
-//    @IBOutlet weak var textView: UITextView!
-    
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
 
@@ -31,20 +30,29 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
-        
-        if let user = NCMBUser.currentUser() {
-            print("ログイン中: \(user)")
-            search2()
-        } else {
-            print("ログインしていない")
-            signup()
-        }
-        setupLocation()
     }
 
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if let user = NCMBUser.currentUser() {
+            print("ログイン中: \(user)")
+            search2()
+        } else {
+            print("ログインしていない")
+            // とりあえず、通常通りに宣言
+            let name = "Main"
+            let identifier = "Login"
+            let storyboard = UIStoryboard(name: name, bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier(identifier) as! LoginViewController
+            self.navigationController?.presentViewController(viewController, animated: true, completion: nil)
+        }
+        setupLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,36 +111,6 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-    // MARK: - Signup & Login
-    
-    // とりあえずUI無しの固定
-
-    func login() {
-        let user = User.logInWithUsernameInBackground("naoki", password: "pass") { (User, error) -> Void in
-            //
-        }
-    }
-    
-    func signup() {
-        let user = User()
-        user.userName = "naokits7"
-        user.password = "hogehoge"
-        user.title = "タイトル2"
-        user.age = 22
-        user.latitude = 35.690921
-        user.longitude = 139.700258
-        let geoPoint = NCMBGeoPoint(latitude: user.latitude, longitude: user.longitude)
-        user.geoPoint = geoPoint
-        
-        user.signUpInBackgroundWithBlock { (error) -> Void in
-            if let e = error {
-                print("サインアップ失敗: \(e)")
-            } else {
-                print("サインアップ成功")
-            }
-        }
-    }
     
     // MARK: - GEO Search
 
@@ -158,14 +136,10 @@ class MasterViewController: UITableViewController {
         geoQuery.findObjectsInBackgroundWithBlock { objects, error in
             if let e = error {
                 print("失敗: \(e)")
-            } else {
-                if let users:[User] = objects as? [User] {
-                    print("********** \(users)")
-                }
-//                let points = objects as NSArray
-//                for o in points {
-//                    print("成功: \(o.objectForKey("geoPoint"))")
-//                }
+                return
+            }
+            if let users:[User] = objects as? [User] {
+                print("********** \(users)")
             }
         }
     }
@@ -188,16 +162,6 @@ class MasterViewController: UITableViewController {
         } catch {
             print("失敗: \(error)")
         }
-        
-//        geoQuery.findObjectsInBackgroundWithBlock { objects, error in
-//            if let e = error {
-//                print("失敗: \(e)")
-//            } else {
-//                for p in objects as! [Location] {
-//                    print(p.name)
-//                }
-//            }
-//        }
     }
 
     
@@ -209,6 +173,25 @@ class MasterViewController: UITableViewController {
         //        locationManager.distanceFilter = 100
         locationManager.startUpdatingLocation()
     }
+    
+    func addLocation() {
+        let latitude = 35.690921
+        let longitude = 139.700258
+        let geoPoint = NCMBGeoPoint(latitude: latitude, longitude: longitude)
+        
+        let location = Location.object() as! Location
+        location.geoPoint = geoPoint
+        location.name = "新宿駅"
+        location.setObject("新宿駅", forKey: "name")
+        location.saveInBackgroundWithBlock { error in
+            if let e = error {
+                print("端末情報の保存失敗: \(e)")
+            } else {
+                print("端末情報の保存成功")
+            }
+        }
+    }
+
 }
 
 

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -22,7 +24,7 @@
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="NCMB_iOSAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -73,21 +75,21 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="NCMB_iOSAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -127,6 +129,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="AjZ-Hv-wpx">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="38R-eZ-phc" customClass="LoginViewController" customModule="NCMB_iOSAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="foS-Vs-KXY"/>
+                        <viewControllerLayoutGuide type="bottom" id="uyK-Bj-nA5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9TW-V3-kvD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザ名を入力してください" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeO-56-IRu">
+                                <rect key="frame" x="150" y="57" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R7j-mQ-Tmn"/>
+                                    <constraint firstAttribute="width" constant="300" id="SCM-yv-6yx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレスを入力してください" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvx-MQ-DKH">
+                                <rect key="frame" x="150" y="129" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0IZ-Jh-oOy"/>
+                                    <constraint firstAttribute="height" constant="30" id="yJw-ya-5ua"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワードを入力してください" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChH-eh-HJ7">
+                                <rect key="frame" x="150" y="201" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="71y-9Q-tBP"/>
+                                    <constraint firstAttribute="height" constant="30" id="xHn-qy-17A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ml-9i-Dr8">
+                                <rect key="frame" x="270" y="260" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1AG-lH-3Z3"/>
+                                    <constraint firstAttribute="width" constant="60" id="5K2-2G-pDZ"/>
+                                </constraints>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedLoginButton:" destination="38R-eZ-phc" eventType="touchUpInside" id="5w4-N6-hh7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="trailing" secondItem="Uvx-MQ-DKH" secondAttribute="trailing" id="1o1-fj-bLO"/>
+                            <constraint firstAttribute="centerX" secondItem="0Ml-9i-Dr8" secondAttribute="centerX" id="2v1-l9-c0k"/>
+                            <constraint firstItem="ChH-eh-HJ7" firstAttribute="top" secondItem="Uvx-MQ-DKH" secondAttribute="bottom" constant="42" id="3Kd-D5-DmW"/>
+                            <constraint firstAttribute="centerX" secondItem="ZeO-56-IRu" secondAttribute="centerX" id="Bhw-yE-Nd0"/>
+                            <constraint firstItem="0Ml-9i-Dr8" firstAttribute="top" secondItem="9TW-V3-kvD" secondAttribute="topMargin" constant="20" id="Ccb-1K-1t7"/>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="trailing" secondItem="9TW-V3-kvD" secondAttribute="trailingMargin" constant="16" id="CpV-ai-bSY"/>
+                            <constraint firstItem="Uvx-MQ-DKH" firstAttribute="top" secondItem="ZeO-56-IRu" secondAttribute="bottom" constant="42" id="FRC-KG-VBj"/>
+                            <constraint firstAttribute="centerX" secondItem="Uvx-MQ-DKH" secondAttribute="centerX" id="Flo-sm-Ngs"/>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="top" secondItem="foS-Vs-KXY" secondAttribute="bottom" constant="37" id="Gcr-sY-RmY"/>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="leading" secondItem="9TW-V3-kvD" secondAttribute="leadingMargin" constant="16" id="K3J-eC-P1m"/>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="leading" secondItem="Uvx-MQ-DKH" secondAttribute="leading" id="Mz6-rj-0yx"/>
+                            <constraint firstAttribute="centerX" secondItem="ChH-eh-HJ7" secondAttribute="centerX" id="PZ0-3E-jTb"/>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="leading" secondItem="ChH-eh-HJ7" secondAttribute="leading" id="Pzd-0a-YJE"/>
+                            <constraint firstItem="ZeO-56-IRu" firstAttribute="trailing" secondItem="ChH-eh-HJ7" secondAttribute="trailing" id="XI2-ky-px6"/>
+                            <constraint firstItem="0Ml-9i-Dr8" firstAttribute="top" secondItem="ChH-eh-HJ7" secondAttribute="bottom" constant="29" id="odz-YQ-P1u"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K3J-eC-P1m"/>
+                                <exclude reference="CpV-ai-bSY"/>
+                                <exclude reference="1o1-fj-bLO"/>
+                                <exclude reference="Pzd-0a-YJE"/>
+                                <exclude reference="XI2-ky-px6"/>
+                                <exclude reference="Mz6-rj-0yx"/>
+                                <exclude reference="Ccb-1K-1t7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="Uvx-MQ-DKH" id="df3-uS-3em"/>
+                        <outlet property="passwordTextField" destination="ChH-eh-HJ7" id="CVq-Uf-vaT"/>
+                        <outlet property="userNameTextField" destination="ZeO-56-IRu" id="C9B-zQ-0Fk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqB-Ru-zfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59" y="807"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

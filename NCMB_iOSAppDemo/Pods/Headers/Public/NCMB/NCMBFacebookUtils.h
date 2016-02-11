@@ -1,1 +1,0 @@
-../../../NCMB/NCMB/NCMBFacebookUtils.h

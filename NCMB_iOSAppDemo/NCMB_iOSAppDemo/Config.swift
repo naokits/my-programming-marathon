@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NCMB
 
 /**
     アプリケーションキー及び、クライアントキーはご自身のものをご利用ください。
