@@ -35,3 +35,5 @@ Carthage/Build
 ParseLoginDemo/Config.swift
 
 .idea/
+
+bluemix-ncmb-client/npm-debug.log
