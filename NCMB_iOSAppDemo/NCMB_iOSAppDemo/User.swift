@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NCMB
 
 //@objc(User) // <-- 以前はこの宣言をしないと、ハングアップしていた
 

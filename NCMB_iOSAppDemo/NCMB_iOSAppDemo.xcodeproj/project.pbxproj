@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1239F3B51C5BE06800A8A9CB /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1239F3B41C5BE06800A8A9CB /* BaseObject.m */; };
 		1239F3B71C5BFDC600A8A9CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239F3B61C5BFDC600A8A9CB /* User.swift */; };
 		1239F3B91C5C6BE000A8A9CB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239F3B81C5C6BE000A8A9CB /* Location.swift */; };
 		129DFE7D1C5D01AD00E9E693 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DFE7C1C5D01AD00E9E693 /* Config.swift */; };
@@ -20,7 +19,7 @@
 		12C3A6ED1C5BD9A500FDAB60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C3A6EB1C5BD9A500FDAB60 /* LaunchScreen.storyboard */; };
 		12C3A6F81C5BD9A500FDAB60 /* NCMB_iOSAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C3A6F71C5BD9A500FDAB60 /* NCMB_iOSAppDemoTests.swift */; };
 		12C3A7031C5BD9A500FDAB60 /* NCMB_iOSAppDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C3A7021C5BD9A500FDAB60 /* NCMB_iOSAppDemoUITests.swift */; };
-		2B443FE1C44603E4AF8BC3D5 /* libPods-NCMB_iOSAppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F740873A4FF8A1EAD5C39A /* libPods-NCMB_iOSAppDemo.a */; };
+		FB6CFBCE4DDABFF3F1D2B14D /* Pods_NCMB_iOSAppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EA7791629717CC5384B6E /* Pods_NCMB_iOSAppDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03F740873A4FF8A1EAD5C39A /* libPods-NCMB_iOSAppDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NCMB_iOSAppDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1239F3B21C5BE06800A8A9CB /* NCMB_iOSAppDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NCMB_iOSAppDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		1239F3B31C5BE06800A8A9CB /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
-		1239F3B41C5BE06800A8A9CB /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
 		1239F3B61C5BFDC600A8A9CB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1239F3B81C5C6BE000A8A9CB /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		129DFE7C1C5D01AD00E9E693 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -63,6 +58,7 @@
 		12C3A6FE1C5BD9A500FDAB60 /* NCMB_iOSAppDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCMB_iOSAppDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C3A7021C5BD9A500FDAB60 /* NCMB_iOSAppDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCMB_iOSAppDemoUITests.swift; sourceTree = "<group>"; };
 		12C3A7041C5BD9A500FDAB60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		135EA7791629717CC5384B6E /* Pods_NCMB_iOSAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCMB_iOSAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FA5D9D26243DA8123DE8CB /* Pods-NCMB_iOSAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCMB_iOSAppDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NCMB_iOSAppDemo/Pods-NCMB_iOSAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E9C15CFC9B3D27280D14CA51 /* Pods-NCMB_iOSAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCMB_iOSAppDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NCMB_iOSAppDemo/Pods-NCMB_iOSAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B443FE1C44603E4AF8BC3D5 /* libPods-NCMB_iOSAppDemo.a in Frameworks */,
+				FB6CFBCE4DDABFF3F1D2B14D /* Pods_NCMB_iOSAppDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +92,7 @@
 		07306D2C0B134D2BBCE0EE90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03F740873A4FF8A1EAD5C39A /* libPods-NCMB_iOSAppDemo.a */,
+				135EA7791629717CC5384B6E /* Pods_NCMB_iOSAppDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,13 +129,10 @@
 				129DFE7E1C5D04D300E9E693 /* Utils.swift */,
 				1239F3B61C5BFDC600A8A9CB /* User.swift */,
 				1239F3B81C5C6BE000A8A9CB /* Location.swift */,
-				1239F3B31C5BE06800A8A9CB /* BaseObject.h */,
-				1239F3B41C5BE06800A8A9CB /* BaseObject.m */,
 				12C3A6E61C5BD9A500FDAB60 /* Main.storyboard */,
 				12C3A6E91C5BD9A500FDAB60 /* Assets.xcassets */,
 				12C3A6EB1C5BD9A500FDAB60 /* LaunchScreen.storyboard */,
 				12C3A6EE1C5BD9A500FDAB60 /* Info.plist */,
-				1239F3B21C5BE06800A8A9CB /* NCMB_iOSAppDemo-Bridging-Header.h */,
 			);
 			path = NCMB_iOSAppDemo;
 			sourceTree = "<group>";
@@ -359,7 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12C3A6E51C5BD9A500FDAB60 /* DetailViewController.swift in Sources */,
-				1239F3B51C5BE06800A8A9CB /* BaseObject.m in Sources */,
 				12C3A6E31C5BD9A500FDAB60 /* MasterViewController.swift in Sources */,
 				129DFE7D1C5D01AD00E9E693 /* Config.swift in Sources */,
 				1239F3B71C5BFDC600A8A9CB /* User.swift in Sources */,
@@ -511,7 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.NCMB-iOSAppDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NCMB_iOSAppDemo/NCMB_iOSAppDemo-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -526,7 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.NCMB-iOSAppDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NCMB_iOSAppDemo/NCMB_iOSAppDemo-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 			};
 			name = Release;
 		};
@@ -538,6 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.NCMB-iOSAppDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NCMB_iOSAppDemo.app/NCMB_iOSAppDemo";
 			};
 			name = Debug;
@@ -550,6 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.NCMB-iOSAppDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NCMB_iOSAppDemo.app/NCMB_iOSAppDemo";
 			};
 			name = Release;
@@ -561,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.NCMB-iOSAppDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				TEST_TARGET_NAME = NCMB_iOSAppDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -573,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.NCMB-iOSAppDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				TEST_TARGET_NAME = NCMB_iOSAppDemo;
 				USES_XCTRUNNER = YES;
 			};

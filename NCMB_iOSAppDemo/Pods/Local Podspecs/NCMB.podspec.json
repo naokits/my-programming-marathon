@@ -1,6 +1,6 @@
 {
   "name": "NCMB",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "summary": "NCMB is SDK for NIFTY Cloud mobile backend.",
   "description": "NCMB is SDK for NIFTY Cloud mobile backend.\nNIFTY Cloud mobile backend function\n* Data store\n* Push Notification\n* User Management\n* SNS integration\n* File store",
   "homepage": "http://mb.cloud.nifty.com",
@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://github.com/NIFTYCloud-mbaas/ncmb_ios.git",
-    "tag": "v2.2.4"
+    "tag": "v2.2.5"
   },
   "source_files": "NCMB/**/*.{h,m,c}",
   "frameworks": [

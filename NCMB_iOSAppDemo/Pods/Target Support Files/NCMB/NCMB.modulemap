@@ -1,0 +1,6 @@
+framework module NCMB {
+  umbrella header "NCMB-umbrella.h"
+
+  export *
+  module * { export * }
+}

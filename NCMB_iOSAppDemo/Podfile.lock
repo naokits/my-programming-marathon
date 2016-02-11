@@ -1,12 +1,8 @@
 PODS:
-  - NCMB (2.2.4)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
+  - NCMB (2.2.5)
 
 DEPENDENCIES:
   - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
-  - SDWebImage
 
 EXTERNAL SOURCES:
   NCMB:
@@ -14,11 +10,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NCMB:
-    :commit: ea26617a75eb36476930f5b30f55f8b4e5e68fab
+    :commit: e54a0f37cd98d642299acb9559c7f3bbbd44fd4a
     :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
 
 SPEC CHECKSUMS:
-  NCMB: 33ed6da0a4d9438a97e35e9417fed9ab49238300
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  NCMB: 22f8938d950df3e7c89a3afc7e4007b8b9d5c773
 
 COCOAPODS: 0.39.0

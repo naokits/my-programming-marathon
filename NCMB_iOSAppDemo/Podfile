@@ -1,21 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
-# use_frameworks!
-# inhibit_all_warnings!
+use_frameworks!
+inhibit_all_warnings!
 
-# link_with 'PH4J', 'PH4JTests'
+# link_with 'NCMB_iOSAppDemo', 'NCMB_iOSAppDemoTests'
 
 target "NCMB_iOSAppDemo" do
   pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
-  pod 'SDWebImage'
 end
-
-# Parse
-# pod 'Parse'
-# pod 'ParseUI'
-# pod 'ParseFacebookUtilsV4'
-# pod 'ParseCrashReporting'
-# pod 'AsyncDisplayKit'
 
 # Facebook
  # pod 'FBSDKCoreKit'
@@ -23,7 +15,7 @@ end
  # pod 'FBSDKShareKit'
  # pod 'FBSDKMessengerShareKit'
 
-# target :PH4JTests, :exclusive => true do
+# target :NCMB_iOSAppDemoTests, :exclusive => true do
 #   # pod 'FBSnapshotTestCase'
 # end
 
@@ -33,3 +25,5 @@ end
 
 # UI
 # pod 'SVProgressHUD', '~> 1.1'
+
+# pod 'SDWebImage'

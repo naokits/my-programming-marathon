@@ -1,1 +1,0 @@
-../../../NCMB/NCMB/NCMBTwitter/NCMBOAConsumer/NCMBOAServiceTicket.h
