@@ -39,6 +39,10 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
+    // ------------------------------------------------------------------------
+    // MARK: - Login or Signup
+    // ------------------------------------------------------------------------
+    
     /// ログイン or 新規登録が成功した場合の処理
     ///
     /// - parameter user: NCMBUserインスタンス
@@ -69,33 +73,36 @@ class LoginViewController: UIViewController {
     /// - returns: None
     ///
     func loginWithUserName(username: String, password: String, mailaddress: String) {
-        NCMBUser.logInWithUsernameInBackground(username, password: password) { user, error in
+        User.logInWithUsernameInBackground(username, password: password) { user, error in
             if let e = error {
                 print("ログインが失敗したので、サインアップします: \(e)")
-                let u = User()
-                u.userName = username
-                u.password = password
-                u.mailAddress = mailaddress
-                
-                u.title = "タイトル"
-                u.age = 30
-                u.latitude = 35.690921
-                u.longitude = 139.700258
-                let geoPoint = NCMBGeoPoint(latitude: u.latitude, longitude: u.longitude)
-                u.geoPoint = geoPoint
-                
-                user.signUpInBackgroundWithBlock { error in
-                    if let e = error {
-                        print("サインアップ失敗: \(e)")
-                    } else {
-                        print("サインアップ成功")
-                        self.successLoginOrSignupForUser(user)
-                        return
-                    }
-                }
+                self.signupWithUserName(username, password: password, mailaddress: mailaddress)
             } else {
                 self.successLoginOrSignupForUser(user)
             }
+        }
+    }
+    
+    /// ユーザの新規登録を行います。
+    ///
+    /// - parameter username: ログイン時に指定するユーザ名
+    /// - parameter email: ログイン時に指定するメールアドレス
+    /// - parameter password: ログイン時に指定するパスワード
+    /// - returns: None
+    ///
+    func signupWithUserName(username: String, password: String, mailaddress: String) {
+        let u = User()
+        u.userName = username
+        u.password = password
+        u.mailAddress = mailaddress
+        
+        u.signUpInBackgroundWithBlock { error in
+            if let e = error {
+                print("サインアップ失敗: \(e)")
+                return
+            }
+            print("サインアップ成功")
+            self.successLoginOrSignupForUser(u)
         }
     }
     
