@@ -52,7 +52,7 @@ class MasterViewController: UITableViewController {
             let viewController = storyboard.instantiateViewControllerWithIdentifier(identifier) as! LoginViewController
             self.navigationController?.presentViewController(viewController, animated: true, completion: nil)
         }
-        setupLocation()
+//        setupLocation()
     }
 
     override func didReceiveMemoryWarning() {
