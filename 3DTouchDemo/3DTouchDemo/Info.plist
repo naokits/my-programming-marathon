@@ -50,14 +50,16 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string>open-favorites</string>
+			<string>Quick-Action-Menu</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Favorites</string>
+			<string>shortcutTitle1</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>shortcutSubtitle1</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.nkapp.3DTouchDemo.openfavorites</string>
 			<key>UIApplicationShortcutItemUserInfo</key>
 			<dict>
-				<key>key1</key>
+				<key>firstShorcutKey1</key>
 				<string>value1</string>
 			</dict>
 		</dict>
@@ -65,12 +67,12 @@
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeCompose</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>New Message</string>
+			<string>shortcutTitle2</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.nkapp.3DTouchDemo.newmessage</string>
 			<key>UIApplicationShortcutItemUserInfo</key>
 			<dict>
-				<key>key2</key>
+				<key>firstShorcutKey1</key>
 				<string>value2</string>
 			</dict>
 		</dict>
