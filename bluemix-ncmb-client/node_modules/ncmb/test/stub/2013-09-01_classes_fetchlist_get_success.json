@@ -1,0 +1,1 @@
+{"results":[{"objectId":"fetch_object_1","createDate":"2015-06-03T07:46:20.654Z","updateDate":"2015-06-03T07:46:20.656Z","acl":{"*":{"read":true,"write":true}},"key":"value1"},{"objectId":"fetch_object_2","createDate":"2015-06-03T07:46:28.156Z","updateDate":"2015-06-03T07:46:28.157Z","acl":{"*":{"read":true,"write":true}},"key":"value2"}]}

@@ -1,0 +1,7 @@
+{ "name": "orange",
+  "component": 
+   { "__type": "Pointer",
+     "className": "Component",
+     "objectId": "component_id" },
+  "objectId": "pointer_object_id",
+  "createDate": "2013-08-28T03:02:29.990Z" }

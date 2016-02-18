@@ -1,0 +1,7 @@
+{ "name": "orange",
+  "member": 
+   { "__type": "Pointer",
+     "className": "user",
+     "objectId": "epaKcaYZqsREdSMY"},
+  "objectId": "pointer_user_object_id",
+  "createDate": "2015-08-07T10:17:20.821Z" }

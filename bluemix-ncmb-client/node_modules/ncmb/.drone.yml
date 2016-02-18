@@ -1,0 +1,6 @@
+image: node
+env:
+  - PATH=./node_modules/.bin:$PATH
+script:
+  - npm install
+  - npm test

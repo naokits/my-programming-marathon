@@ -1,0 +1,19 @@
+{
+  "createDate":"2013-08-15T14:43:26.242Z",
+  "objectId":"gUtxyRGbqJaWeeGc",
+  "userName":"Gxzp8zTTlS",
+  "authData":{
+    "twitter":{
+      "id":"887423302",
+      "screen_name":"mobilebackend",
+      "oauth_consumer_key":"ZoL16IzyCEEik4nNTEN9RW",
+      "consumer_secret":"ubFWbG0wL7bub7gnWSkAKAmXj6VZ97DpmK2ZSCc5Opk",
+      "oauth_token":"887423106-VxW8foViKjNDOyCLcC0WhTIyxUo2r3eXLLeogUtB",
+      "oauth_token_secret":"gye4VHfEHHBCH34cEJGiAWlukGAEJ6DCixYNU6Mg"
+    }
+  },
+  "mailAddress":null,
+  "mailAddressConfirm":false,
+  "sessionToken":"bfHuZvZ9vXZaCfMZ7fBrRnvru",
+  "updateDate":"2013-08-15T14:59:49.077Z"
+}
