@@ -11,11 +11,17 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - Properties
+
     var window: UIWindow?
 
+    // MARK: - Application Cycle
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupTinderLikePageBasedViewController()
+        
         return true
     }
 
@@ -41,6 +47,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Setup ViewController with Navigation
 
+    func setupTinderLikePageBasedViewController() {
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let v1 = UIViewController()
+        v1.view.backgroundColor = UIColor.purpleColor()
+        let v2 = UIViewController()
+        v2.view.backgroundColor = UIColor.redColor()
+        
+        let name = "Main"
+        let identifier = "MainViewController"
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let v3 = storyboard.instantiateViewControllerWithIdentifier(identifier) as! MainViewController
+        
+        let v4 = UIViewController()
+        v4.view.backgroundColor = UIColor.orangeColor()
+        let v5 = UIViewController()
+        v5.view.backgroundColor = UIColor.yellowColor()
+
+        // navigation bar (icons and strings)
+        let controllers = [v1,v2,v3,v4,v5]
+//        let iconAndTitles = NSArray(array: [UIImage(named:"photo")!, UIImage(named:"heart")!, UIImage(named:"conf")!, UIImage(named:"message")!, UIImage(named:"map")!])
+        // 中央のナビゲーションタイトルのみ文字列指定
+        let iconAndTitles = NSArray(array: [UIImage(named:"photo")!, UIImage(named:"heart")!, "設定", UIImage(named:"message")!, UIImage(named:"map")!])
+        let controller = AHPagingMenuViewController(controllers: controllers, icons: iconAndTitles, position:2)
+
+        controller.setShowArrow(false)
+        controller.setTransformScale(true)
+        controller.setDissectColor(UIColor(white: 0.756, alpha: 1.0));
+        controller.setSelectColor(UIColor(red: 0.963, green: 0.266, blue: 0.176, alpha: 1.000))
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.rootViewController = controller
+        self.window!.makeKeyAndVisible()
+    }
 }
 
