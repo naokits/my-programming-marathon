@@ -23,6 +23,7 @@
 - [IBDesignableとIBInspectableを使用して、カスタムUIViewを作るデモアプリ](IBDesignableDemo/README.md)
 - [Parse.comが提供している独自ログインを行うデモアプリ](./ParseLoginDemo/README.md)
 - [Tinderライクなページング可能なメニュー表示のデモ](./TinderLikePageBasedApp/README.md)
+- [MKDirectionsを使用して、出発地から目的地までのルート、距離、所要時間を表示するデモ](./MKDirectionsDemo/README.md)
 
 ### 全ての仕様は満たしてないが、部分的に実装が終わっているデモのコード
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--MKDirectionsDemo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="MKDirectionsDemo" id="BYZ-38-t0r" customClass="ViewController" customModule="MKDirectionsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2lM-Yo-W65"/>
+                        <viewControllerLayoutGuide type="bottom" id="09R-S9-ul1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gUi-VY-wxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TLM-DY-G9Q">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-OK-Chx">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="559"/>
+                                    </mapView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bAO-lO-Ru0">
+                                        <rect key="frame" x="0.0" y="559" width="600" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目的地までの距離:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2E-Fy-Iu1">
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0.0Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48G-aE-aBg">
+                                                <rect key="frame" x="146" y="0.0" width="454" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="buG-Hi-ocW">
+                                        <rect key="frame" x="0.0" y="580" width="600" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所要時間:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg4-sI-hRu">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IST-pM-fiA">
+                                                <rect key="frame" x="78" y="0.0" width="522" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bAO-lO-Ru0" firstAttribute="leading" secondItem="TLM-DY-G9Q" secondAttribute="leading" id="3kV-4Y-ZeV"/>
+                                    <constraint firstItem="bAO-lO-Ru0" firstAttribute="top" secondItem="OFb-OK-Chx" secondAttribute="bottom" id="Eo4-Ut-gTd"/>
+                                    <constraint firstItem="buG-Hi-ocW" firstAttribute="top" secondItem="bAO-lO-Ru0" secondAttribute="bottom" id="Hcg-cF-hU2"/>
+                                    <constraint firstAttribute="trailing" secondItem="bAO-lO-Ru0" secondAttribute="trailing" id="NwZ-3r-Lqq"/>
+                                    <constraint firstAttribute="bottom" secondItem="buG-Hi-ocW" secondAttribute="bottom" constant="-1" id="Qop-PM-kEc"/>
+                                    <constraint firstItem="OFb-OK-Chx" firstAttribute="leading" secondItem="TLM-DY-G9Q" secondAttribute="leading" id="eAS-zx-QfV"/>
+                                    <constraint firstAttribute="trailing" secondItem="OFb-OK-Chx" secondAttribute="trailing" id="m1x-Y3-WLD"/>
+                                    <constraint firstAttribute="trailing" secondItem="buG-Hi-ocW" secondAttribute="trailing" id="maA-W1-qXZ"/>
+                                    <constraint firstItem="bAO-lO-Ru0" firstAttribute="top" secondItem="OFb-OK-Chx" secondAttribute="bottom" id="nHC-ap-dpE"/>
+                                    <constraint firstItem="OFb-OK-Chx" firstAttribute="top" secondItem="TLM-DY-G9Q" secondAttribute="top" id="rcQ-eM-Wkx"/>
+                                    <constraint firstItem="buG-Hi-ocW" firstAttribute="leading" secondItem="TLM-DY-G9Q" secondAttribute="leading" id="xa5-bB-ChZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hcg-cF-hU2"/>
+                                        <exclude reference="Qop-PM-kEc"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TLM-DY-G9Q" firstAttribute="centerY" secondItem="gUi-VY-wxZ" secondAttribute="centerY" id="AdD-5F-g1b"/>
+                            <constraint firstItem="TLM-DY-G9Q" firstAttribute="centerX" secondItem="gUi-VY-wxZ" secondAttribute="centerX" id="Q9i-VY-3zV"/>
+                            <constraint firstItem="TLM-DY-G9Q" firstAttribute="leading" secondItem="gUi-VY-wxZ" secondAttribute="leading" id="aPX-j9-uDw"/>
+                            <constraint firstItem="TLM-DY-G9Q" firstAttribute="top" secondItem="gUi-VY-wxZ" secondAttribute="top" id="pa7-Sc-GHY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="distance" destination="48G-aE-aBg" id="fZZ-hp-eGd"/>
+                        <outlet property="expectedTravelTime" destination="IST-pM-fiA" id="niQ-Ty-gZ2"/>
+                        <outlet property="mapView" destination="OFb-OK-Chx" id="fVn-iz-KrF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="272"/>
+        </scene>
+    </scenes>
+</document>
