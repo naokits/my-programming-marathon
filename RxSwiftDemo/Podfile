@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'RxSwiftDemo' do
+  pod 'RxSwift',    '~> 2.0'
+  pod 'RxCocoa',    '~> 2.0'
+  # pod 'RxBlocking', '~> 2.0'
+  # pod 'RxTests',    '~> 2.0'
+
+  # pod 'CocoaLumberjack/Swift'
+  pod 'SwiftyBeaver'
+  # pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
+end
