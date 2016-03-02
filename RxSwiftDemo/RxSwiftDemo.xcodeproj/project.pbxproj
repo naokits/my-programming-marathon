@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120499661C8622FB00E5D0F7 /* RxSwiftDemo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftDemo.playground; sourceTree = "<group>"; };
 		123C13951C85E80E00470D3B /* RxSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		123C13981C85E80E00470D3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		123C139A1C85E80E00470D3B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		123C138C1C85E80E00470D3B = {
 			isa = PBXGroup;
 			children = (
+				120499661C8622FB00E5D0F7 /* RxSwiftDemo.playground */,
 				123C13971C85E80E00470D3B /* RxSwiftDemo */,
 				123C13961C85E80E00470D3B /* Products */,
 				F05213A1C4BE04F5E20D4498 /* Pods */,
