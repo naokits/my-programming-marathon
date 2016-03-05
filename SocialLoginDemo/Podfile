@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+target 'SocialLoginDemo' do
+  # Facebook
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  # Twitter
+  pod 'Fabric'
+  pod 'TwitterKit'
+  pod 'TwitterCore'
+  pod 'Crashlytics'
+  # GoogleAnalytics
+  pod 'GoogleAnalytics'
+end
