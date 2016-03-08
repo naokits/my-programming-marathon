@@ -13,6 +13,7 @@
 		122F240F1C8BDE290063E5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122F240D1C8BDE290063E5B0 /* Main.storyboard */; };
 		122F24111C8BDE290063E5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122F24101C8BDE290063E5B0 /* Assets.xcassets */; };
 		122F24141C8BDE290063E5B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122F24121C8BDE290063E5B0 /* LaunchScreen.storyboard */; };
+		CED69C168182F062285F24F9 /* Pods_helloTodo_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1177314608BDA2C77F6857 /* Pods_helloTodo_swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		122F24101C8BDE290063E5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		122F24131C8BDE290063E5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122F24151C8BDE290063E5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2993EE00E98515F8CA5F85B4 /* Pods-helloTodo-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloTodo-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		29B722654161C8B65E3B6230 /* Pods-helloTodo-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloTodo-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift.release.xcconfig"; sourceTree = "<group>"; };
+		7A1177314608BDA2C77F6857 /* Pods_helloTodo_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloTodo_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED69C168182F062285F24F9 /* Pods_helloTodo_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0709491C083B387D7871CDDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2993EE00E98515F8CA5F85B4 /* Pods-helloTodo-swift.debug.xcconfig */,
+				29B722654161C8B65E3B6230 /* Pods-helloTodo-swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		122F23FB1C8BDE290063E5B0 = {
 			isa = PBXGroup;
 			children = (
 				122F24061C8BDE290063E5B0 /* helloTodo-swift */,
 				122F24051C8BDE290063E5B0 /* Products */,
+				0709491C083B387D7871CDDA /* Pods */,
+				D5E8B2A0499F3CF3D1EAF1EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = "helloTodo-swift";
 			sourceTree = "<group>";
 		};
+		D5E8B2A0499F3CF3D1EAF1EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A1177314608BDA2C77F6857 /* Pods_helloTodo_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 122F24181C8BDE290063E5B0 /* Build configuration list for PBXNativeTarget "helloTodo-swift" */;
 			buildPhases = (
+				EFA8A8D09ECF1D10BA060820 /* Check Pods Manifest.lock */,
 				122F24001C8BDE290063E5B0 /* Sources */,
 				122F24011C8BDE290063E5B0 /* Frameworks */,
 				122F24021C8BDE290063E5B0 /* Resources */,
+				430F8C981129628E33713F1E /* Embed Pods Frameworks */,
+				F19EC7E08CD34DC612018178 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		430F8C981129628E33713F1E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA8A8D09ECF1D10BA060820 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F19EC7E08CD34DC612018178 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		122F24001C8BDE290063E5B0 /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		122F24191C8BDE290063E5B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2993EE00E98515F8CA5F85B4 /* Pods-helloTodo-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "helloTodo-swift/Info.plist";
@@ -260,6 +336,7 @@
 		};
 		122F241A1C8BDE290063E5B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B722654161C8B65E3B6230 /* Pods-helloTodo-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "helloTodo-swift/Info.plist";
@@ -288,6 +365,7 @@
 				122F241A1C8BDE290063E5B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
