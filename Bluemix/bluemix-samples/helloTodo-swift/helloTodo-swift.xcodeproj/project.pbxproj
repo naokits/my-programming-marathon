@@ -25,6 +25,7 @@
 		122F24101C8BDE290063E5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		122F24131C8BDE290063E5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122F24151C8BDE290063E5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		128E3E6F1C906847008DC3BC /* helloTodo-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "helloTodo-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		2993EE00E98515F8CA5F85B4 /* Pods-helloTodo-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloTodo-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		29B722654161C8B65E3B6230 /* Pods-helloTodo-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloTodo-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift.release.xcconfig"; sourceTree = "<group>"; };
 		7A1177314608BDA2C77F6857 /* Pods_helloTodo_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloTodo_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +80,7 @@
 				122F24101C8BDE290063E5B0 /* Assets.xcassets */,
 				122F24121C8BDE290063E5B0 /* LaunchScreen.storyboard */,
 				122F24151C8BDE290063E5B0 /* Info.plist */,
+				128E3E6F1C906847008DC3BC /* helloTodo-swift-Bridging-Header.h */,
 			);
 			path = "helloTodo-swift";
 			sourceTree = "<group>";
@@ -327,10 +329,13 @@
 			baseConfigurationReference = 2993EE00E98515F8CA5F85B4 /* Pods-helloTodo-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "helloTodo-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.helloTodo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "helloTodo-swift/helloTodo-swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -339,10 +344,12 @@
 			baseConfigurationReference = 29B722654161C8B65E3B6230 /* Pods-helloTodo-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "helloTodo-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nkapp.helloTodo-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "helloTodo-swift/helloTodo-swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
