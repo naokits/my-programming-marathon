@@ -13,6 +13,7 @@
 		122F240F1C8BDE290063E5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122F240D1C8BDE290063E5B0 /* Main.storyboard */; };
 		122F24111C8BDE290063E5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122F24101C8BDE290063E5B0 /* Assets.xcassets */; };
 		122F24141C8BDE290063E5B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122F24121C8BDE290063E5B0 /* LaunchScreen.storyboard */; };
+		128E3E741C906C40008DC3BC /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E3E731C906C40008DC3BC /* TodoItem.swift */; };
 		CED69C168182F062285F24F9 /* Pods_helloTodo_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1177314608BDA2C77F6857 /* Pods_helloTodo_swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		122F24131C8BDE290063E5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122F24151C8BDE290063E5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		128E3E6F1C906847008DC3BC /* helloTodo-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "helloTodo-swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		128E3E731C906C40008DC3BC /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		2993EE00E98515F8CA5F85B4 /* Pods-helloTodo-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloTodo-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		29B722654161C8B65E3B6230 /* Pods-helloTodo-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloTodo-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloTodo-swift/Pods-helloTodo-swift.release.xcconfig"; sourceTree = "<group>"; };
 		7A1177314608BDA2C77F6857 /* Pods_helloTodo_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloTodo_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				122F24071C8BDE290063E5B0 /* AppDelegate.swift */,
 				122F24091C8BDE290063E5B0 /* MasterViewController.swift */,
 				122F240B1C8BDE290063E5B0 /* DetailViewController.swift */,
+				128E3E731C906C40008DC3BC /* TodoItem.swift */,
 				122F240D1C8BDE290063E5B0 /* Main.storyboard */,
 				122F24101C8BDE290063E5B0 /* Assets.xcassets */,
 				122F24121C8BDE290063E5B0 /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 			files = (
 				122F240C1C8BDE290063E5B0 /* DetailViewController.swift in Sources */,
 				122F240A1C8BDE290063E5B0 /* MasterViewController.swift in Sources */,
+				128E3E741C906C40008DC3BC /* TodoItem.swift in Sources */,
 				122F24081C8BDE290063E5B0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
