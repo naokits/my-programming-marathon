@@ -3,7 +3,9 @@
 ## 概要
 
 IBMが提供している **helloTodo** アプリはObjective-C用なので、Swift版を書いてみる。
-動作に関しては、**helloTodo** と同様、ExpressサーバのAPIにアクセスしてTodoの追加、編集、削除を行う。
+~~動作に関しては、**helloTodo** と同様、ExpressサーバのAPIにアクセスしてTodoの追加、編集、削除を行う。~~
+
+IMFCoreはObjective-Cのライブラリなので、Swiftで使用するには面倒臭すぎる。よってリクエストの結果（レスポンス）をコンソールに表示するだけにする。
 
 ## 動作確認環境
 

@@ -10,9 +10,14 @@ import UIKit
 
 class MasterViewController: UITableViewController {
 
+    // MARK: - Properties
+
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
 
+    var backendRoute: NSString?
+
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,10 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+
+        backendRoute = NSString(format: "%@", IMFClient.sharedInstance().backendRoute)
+        print("ルート: \(backendRoute)")
+        printItems()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +45,8 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // MARK: - Data Source
 
     func insertNewObject(sender: AnyObject) {
         objects.insert(NSDate(), atIndex: 0)
@@ -89,6 +100,23 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    // MARK: - Bluemix Relate Methods
 
+    /// コンソールにレスポンス結果を返すだけ
+    func printItems() {
+        let restAPIURL = NSString(format: "%@/api/Items", backendRoute!)
+        let request = IMFResourceRequest(path: restAPIURL as String)
+        
+        request.setHTTPMethod("GET")
+        request.sendWithCompletionHandler { (response, error) -> Void in
+            if let e = error {
+                NSLog("Error pulling items from Bluemix: %@",e);
+                return
+            }
+            print("素のレスポンス: \(response)")
+            let responseArray = response.responseJson as NSDictionary
+            print(responseArray.count)
+        }
+    }
 }
 

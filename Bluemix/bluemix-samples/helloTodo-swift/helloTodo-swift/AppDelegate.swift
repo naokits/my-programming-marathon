@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
         splitViewController.delegate = self
+        
+        setupBMX()
+        
         return true
     }
 
@@ -57,5 +60,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return false
     }
 
+    // MARK: - Setup
+
+    func setupBMX() {
+        //        let imfClient = IMFClient.sharedInstance()
+        let appRoute = "http://bluemix-mobile-app-demo.mybluemix.net"
+        let appGUID = "3ff171d1-c941-43d6-801e-84a549550a88"
+        IMFClient.sharedInstance().initializeWithBackendRoute(appRoute, backendGUID: appGUID)
+    }
 }
 
