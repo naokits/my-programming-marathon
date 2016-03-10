@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HelloTodo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="float-right" style="align:center">
+        <a class="mf-btn mf-btn--primary" href="/explorer/#!/Item" target="_blank">View API Reference</a>
+    </div>
+    <header>
+        <h1>HelloTodo</h1>
+
+        <p>This simple todo list backend and web app were created using StrongLoop and Bluemix Mobile Services. Follow the onscreen guided experience to get started.</p>
+    </header>
+    <div class="container">
+        <div id="InfoBox">
+            <div class="instr-pane active" id="init">
+                <h4>Getting Started</h4>
+
+                <p class="next">Add a few
+                    items to the list on the right.</p>
+            </div>
+
+            <div class="instr-pane" id="saveNewItemClicked">
+                <h4>Adding a new item</h4>
+
+                <p>Well done. Two API calls were required to add that Todo:</p>
+				<span class="api-block">
+					<a href='/explorer/#!/Item/Item_create' target='_blank'>POST</a> - Create and add the new item<br>
+					<code>
+                        <pre>/api/Items</pre>
+                    </code>
+					<a href='/explorer/#!/Item/Item_find' target='_blank'>GET</a> - Retrieve the full list<br>
+					<code>
+                        <pre>/api/Items</pre>
+                    </code><br>
+				</span>
+                <p class="next">Next, try editing an item.</p>
+            </div>
+
+            <div class="instr-pane" id="editButtonClicked">
+                <h4>Accessing an existing item</h4>
+                <p>Good choice. One API call was required to retrieve the Todo information:</p>
+				<span class="api-block">
+					<a href='/explorer/#!/Item/Item_findById' target='_blank'>GET</a> - Single item by ID.<br>
+					<code>
+                        <pre>/api/Items/:id</pre>
+                    </code><br>
+				</span>
+                <p class="next">Next, hit <b>save</b> to store your changes.</p>
+            </div>
+
+            <div class="instr-pane" id="saveExistingItemClicked">
+                <h4>Updating an item</h4>
+                <p>Success. Two API calls were required to store your changes:</p>
+				<span class="api-block">
+					<a href='/explorer/#!/Item/Item_prototype_updateAttributes'
+                       target='_blank'>PUT</a> - update item<br>
+					<code>
+                        <pre>/api/Items/:id</pre>
+                    </code>
+					<a href='/explorer/#!/Item/Item_find' target='_blank'>GET</a> - retrieve the full list <br>
+					<code>
+                        <pre>/api/Items</pre>
+                    </code><br>
+				</span>
+                <p class="next">Next, mark an item as completed using the checkbox.</p>
+            </div>
+
+            <div class="instr-pane" id="doneButtonClicked">
+                <h4>Updating an item</h4>
+                <p>Progress! Similarly, two API calls were required to store your changes:</p>
+				<span class="api-block">
+					<a href='/explorer/#!/Item/Item_prototype_updateAttributes'
+                       target='_blank'>PUT</a> - update item<br>
+					<code>
+                        <pre>/api/Items/:id</pre>
+                    </code>
+					<a href='/explorer/#!/Item/Item_find' target='_blank'>GET</a> - retrieve the full list<br>
+					<code>
+                        <pre>/api/Items</pre>
+                    </code><br>
+				</span>
+                <p class="next">Now, try to <b>delete</b> an item.</p>
+            </div>
+
+            <div class="instr-pane" id="deleteButtonClicked">
+                <h4>Deleting an item</h4>
+                <p>An API call was made in an attempt to delete the todo item</p>
+				<span class="api-block">
+					<a href='/explorer/#!/Item/Item_deleteById' target='_blank'>DELETE</a> - remove item<br>
+					<code><pre>/api/Items/:id</pre></code>
+                <p>However request failed since DELETE endpoint is protected by the
+                    <a href="https://www.ng.bluemix.net/docs/services/mobileaccess/index.html" target="_blank">Mobile Client Access</a> service
+                    and can only be accessed by mobile applications instrumented with Mobile Client Access SDK.
+				</span>
+
+                <p class="next">Continue to <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo"
+                                                    target="_blank">iOS HelloTodo sample</a></p>
+                <p class="next">Continue to <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo"
+                                   target="_blank">Android HelloTodo sample</a></p>
+                <p class="next">Learn to create a <a href="https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop"
+                                                     target="_blank">mobile backend</a> with StrongLoop</p>
+                <p class="next">Learn to protect your mobile backend with <a href="https://www.ng.bluemix.net/docs/services/mobileaccess/index.html"
+                                                    target="_blank">Mobile Client Access</a></p>
+            </div>
+        </div>
+
+        <div class="todo-list">
+            <strong>Todo List</strong><br/><br>
+            <form action="" id="new-todo">
+                <input type="text" id="ItemText" placeholder="New todo" style="width: 300px"/>
+                <button type="submit" id="SaveNewItemButton" class="mf-btn mf-btn--primary-alt">Add</button>
+            </form>
+            <table id="ItemsList">
+            </table>
+				<div class="tc"><span id="refresh" class="refresh" style="display: none">Refresh</span></div>
+        </div>
+
+    </div>
+
+    <div class="made-with float-left">
+        <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo" target="_blank"><b>iOS sample</b></a> |
+        <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo" target="_blank"><b>Android sample</b></a> |
+        <a href="https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop" target="_blank"><b>Mobile backend sample</b></a>
+    </div>
+    <div class="made-with float-right">
+        Created with <b><a href="http://www.ibm.com/cloud-computing/bluemix/solutions/mobilefirst/">Bluemix Mobile Services</a></b>
+        and <b><a href="https://strongloop.com/">StrongLoop</a></b>
+    </div>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="Facade.js"></script>
+<script src="App.js"></script>
+<script>$(document).ready(App.init);</script>
+
+</body>
+</html>
