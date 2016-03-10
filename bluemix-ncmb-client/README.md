@@ -2,9 +2,11 @@
 
 ## [WIP] 概要
 
-IBMが提供している **helloTodo** アプリはObjective-C用なので、Swift版を書いてみる。
-~~動作に関しては、**helloTodo** と同様、ExpressサーバのAPIにアクセスしてTodoの追加、編集、削除を行う。~~
+BrewmixのNode.js（StrongLoop）経由で、NCMBのAPIにアクセスする。NCMBへのアクセスは `NCMB JavaScript SDK` を使用して行います。
 
+- まずは、イントロダクションの `Node.jsでの動作確認` セクションに書かれたサンプルコードをほぼそのまま使用して動作を確認します。具体的には、ダッシュボードのデータストアにサンプルデータが登録されていればOK。
+- ロケーション情報を登録するAPIをBlueix側に作成します。
+- 検索開始位置と距離（半径）を指定して、登録した位置情報から検索します。
 
 ## 動作確認環境
 
@@ -23,3 +25,4 @@ IBMが提供している **helloTodo** アプリはObjective-C用なので、Swi
 
 - [IBM Bluemix - Next-Generation Cloud App Development Platform](https://console.ng.bluemix.net/)
 - [mBaaSでサーバー開発不要！ | ニフティクラウド mobile backend](http://mb.cloud.nifty.com/)
+- [イントロダクション (JavaScript) : クイックスタート | ニフティクラウド mobile backend](http://mb.cloud.nifty.com/doc/current/introduction/quickstart_javascript.html)
