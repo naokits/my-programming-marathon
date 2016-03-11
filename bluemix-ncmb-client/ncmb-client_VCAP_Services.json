@@ -1,0 +1,36 @@
+{
+  "AdvancedMobileAccess" : [ {
+    "name" : "ncmb-client-AdvancedMobileAccess",
+    "label" : "AdvancedMobileAccess",
+    "plan" : "Bronze",
+    "credentials" : {
+      "serverUrl" : "https://imf-authserver.ng.bluemix.net/imf-authserver",
+      "clientId" : "03de5cc3-a763-4d4a-857d-40e0c51bcdec",
+      "secret" : "XBK5tZgHQe6feCbXLgzwtw",
+      "tenantId" : "03de5cc3-a763-4d4a-857d-40e0c51bcdec",
+      "admin_url" : "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=03de5cc3-a763-4d4a-857d-40e0c51bcdec"
+    }
+  } ],
+  "imfpush" : [ {
+    "name" : "ncmb-client-imfpush",
+    "label" : "imfpush",
+    "plan" : "Basic",
+    "credentials" : {
+      "url" : "http://imfpush.ng.bluemix.net/imfpush/v1/apps/03de5cc3-a763-4d4a-857d-40e0c51bcdec",
+      "admin_url" : "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=03de5cc3-a763-4d4a-857d-40e0c51bcdec",
+      "appSecret" : "d9fee068-2dd9-4bcc-8da8-11e72caff551"
+    }
+  } ],
+  "cloudantNoSQLDB" : [ {
+    "name" : "ncmb-client-cloudantNoSQLDB",
+    "label" : "cloudantNoSQLDB",
+    "plan" : "Shared",
+    "credentials" : {
+      "username" : "2081f5de-a33a-4d6e-9820-db5fb26c594b-bluemix",
+      "password" : "c777c7f841ce5ebb0785267cf05b40e3fcf8c3385630e758d33fe92570c386cd",
+      "host" : "2081f5de-a33a-4d6e-9820-db5fb26c594b-bluemix.cloudant.com",
+      "port" : 443,
+      "url" : "https://2081f5de-a33a-4d6e-9820-db5fb26c594b-bluemix:c777c7f841ce5ebb0785267cf05b40e3fcf8c3385630e758d33fe92570c386cd@2081f5de-a33a-4d6e-9820-db5fb26c594b-bluemix.cloudant.com"
+    }
+  } ]
+}
