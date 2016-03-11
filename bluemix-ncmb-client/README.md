@@ -26,3 +26,4 @@ BrewmixのNode.js（StrongLoop）経由で、NCMBのAPIにアクセスする。N
 - [IBM Bluemix - Next-Generation Cloud App Development Platform](https://console.ng.bluemix.net/)
 - [mBaaSでサーバー開発不要！ | ニフティクラウド mobile backend](http://mb.cloud.nifty.com/)
 - [イントロダクション (JavaScript) : クイックスタート | ニフティクラウド mobile backend](http://mb.cloud.nifty.com/doc/current/introduction/quickstart_javascript.html)
+- [NIFTYCloud-mbaas/ncmb_js](https://github.com/NIFTYCloud-mbaas/ncmb_js)
