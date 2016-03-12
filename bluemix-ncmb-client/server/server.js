@@ -6,6 +6,37 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+// 1. ncmbモジュールの読み込み
+var NCMB = require("ncmb");
+// 2. mobile backendアプリとの連携
+var YOUR_APPLICATIONKEY = "eb8b0d30b4a79da1263520921c5f451bf49c5b4aec15cee525ce7ec71a6aad0b"
+var YOUR_CLIENTKEY = "79f3d17624fc59b56f18755e3d5b69e0c8c88fab373497d8469456a57aadc4c8"
+var ncmb = new NCMB(YOUR_APPLICATIONKEY, YOUR_CLIENTKEY);
+
+// TestClassの作成
+var TestClass = ncmb.DataStore("TestClass");
+// 3.TestClassへの入出力
+TestClass.equalTo("message", "Hello, NCMB!")
+         .fetchAll()
+         .then(function(results){
+           if(results[0] != null){
+             console.log(results[0].get("message"));
+           }else{
+             var testClass = new TestClass();
+             testClass.set("message", "Hello, NCMB!");
+             testClass.save()
+                      .then(function(){
+                        console.log("message is saved.");
+                      })
+                      .catch(function(err){
+                        console.log(err.text);
+                      });
+           }
+         })
+         .catch(function(err){
+           console.log(err.text);
+         });
+
 // ------------ Protecting mobile backend with Mobile Client Access start -----------------
 
 // Load passport (http://passportjs.org)
@@ -49,4 +80,3 @@ boot(app, __dirname, function (err) {
 	if (require.main === module)
 		app.start();
 });
-
