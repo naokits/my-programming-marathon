@@ -1,0 +1,6 @@
+framework module ObjectiveCloudant {
+  umbrella header "ObjectiveCloudant-umbrella.h"
+
+  export *
+  module * { export * }
+}
