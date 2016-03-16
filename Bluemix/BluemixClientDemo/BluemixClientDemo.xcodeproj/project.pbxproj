@@ -13,6 +13,7 @@
 		121FA8581C954463001420E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FA8561C954463001420E4 /* Main.storyboard */; };
 		121FA85A1C954463001420E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121FA8591C954463001420E4 /* Assets.xcassets */; };
 		121FA85D1C954463001420E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FA85B1C954463001420E4 /* LaunchScreen.storyboard */; };
+		8DC2574138388C7794323590 /* Pods_BluemixClientDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C7D89CBBCB84EF90C35F2D /* Pods_BluemixClientDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		121FA8591C954463001420E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		121FA85C1C954463001420E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		121FA85E1C954463001420E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A8417EB1341226132A1EEE8 /* Pods-BluemixClientDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluemixClientDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BluemixClientDemo/Pods-BluemixClientDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		95AD165449B604480196875C /* Pods-BluemixClientDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluemixClientDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BluemixClientDemo/Pods-BluemixClientDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E0C7D89CBBCB84EF90C35F2D /* Pods_BluemixClientDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluemixClientDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC2574138388C7794323590 /* Pods_BluemixClientDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				121FA84F1C954463001420E4 /* BluemixClientDemo */,
 				121FA84E1C954463001420E4 /* Products */,
+				DF7B3A2D460E6CE2C80F90E4 /* Pods */,
+				8378D89E2B673533618382C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = BluemixClientDemo;
 			sourceTree = "<group>";
 		};
+		8378D89E2B673533618382C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0C7D89CBBCB84EF90C35F2D /* Pods_BluemixClientDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF7B3A2D460E6CE2C80F90E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A8417EB1341226132A1EEE8 /* Pods-BluemixClientDemo.debug.xcconfig */,
+				95AD165449B604480196875C /* Pods-BluemixClientDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 121FA8611C954463001420E4 /* Build configuration list for PBXNativeTarget "BluemixClientDemo" */;
 			buildPhases = (
+				1EED0828A480C0C5B4B7F6BD /* Check Pods Manifest.lock */,
 				121FA8491C954463001420E4 /* Sources */,
 				121FA84A1C954463001420E4 /* Frameworks */,
 				121FA84B1C954463001420E4 /* Resources */,
+				A5E3AFB6A83353A36D4BBAE6 /* Embed Pods Frameworks */,
+				772C91616ADCEE4BE9B2FDF9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EED0828A480C0C5B4B7F6BD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		772C91616ADCEE4BE9B2FDF9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluemixClientDemo/Pods-BluemixClientDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E3AFB6A83353A36D4BBAE6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluemixClientDemo/Pods-BluemixClientDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		121FA8491C954463001420E4 /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		121FA8621C954463001420E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8417EB1341226132A1EEE8 /* Pods-BluemixClientDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BluemixClientDemo/Info.plist;
@@ -260,6 +336,7 @@
 		};
 		121FA8631C954463001420E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95AD165449B604480196875C /* Pods-BluemixClientDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BluemixClientDemo/Info.plist;
@@ -288,6 +365,7 @@
 				121FA8631C954463001420E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
