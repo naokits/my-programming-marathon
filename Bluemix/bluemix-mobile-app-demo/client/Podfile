@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+
+def bluemix_pods
+  pod 'BMSCore'
+end
+
+target 'HelloTodo' do
+  bluemix_pods
+
+  # Object Mapper
+  pod 'Gloss'
+end
