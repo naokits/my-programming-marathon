@@ -1,6 +1,0 @@
-framework module IMFPush {
-  umbrella header "IMFPush.h"
-
-  export *
-  module * { export * }
-}
