@@ -3,16 +3,19 @@ PODS:
   - BMSCore (1.0.0):
     - BMSAnalyticsAPI (~> 1.0)
   - Gloss (0.7.2)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - BMSCore
   - Gloss
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   BMSAnalyticsAPI: 50f5cec71a5ad0a9af232a833d6d37c2abda54ac
   BMSCore: 2f903402eaeae17ae58fbde69120cf464c0ca413
   Gloss: 45eb51aaa6f2725341aec8d8caa65cfcc31f7f3b
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: e5ca685fc67aed607073731a070143c7ff37d7ab
+PODFILE CHECKSUM: 0b47e8082dbd8d414a178fa83735a5f7e6f9a9f6
 
 COCOAPODS: 1.0.0.beta.8

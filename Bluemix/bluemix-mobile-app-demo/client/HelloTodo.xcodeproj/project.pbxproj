@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123FFFAC1CCB2221004C73EF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FFFAB1CCB2221004C73EF /* Todo.swift */; };
 		124C8A831CCB18210007C884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C8A821CCB18210007C884 /* AppDelegate.swift */; };
 		124C8A851CCB18210007C884 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C8A841CCB18210007C884 /* MasterViewController.swift */; };
 		124C8A871CCB18210007C884 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C8A861CCB18210007C884 /* DetailViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123FFFAB1CCB2221004C73EF /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = Models/Todo.swift; sourceTree = "<group>"; };
 		124C8A7F1CCB18210007C884 /* HelloTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124C8A821CCB18210007C884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124C8A841CCB18210007C884 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				124C8A821CCB18210007C884 /* AppDelegate.swift */,
 				124C8A841CCB18210007C884 /* MasterViewController.swift */,
 				124C8A861CCB18210007C884 /* DetailViewController.swift */,
+				123FFFAB1CCB2221004C73EF /* Todo.swift */,
 				124C8A881CCB18210007C884 /* Main.storyboard */,
 				124C8A8B1CCB18210007C884 /* Assets.xcassets */,
 				124C8A8D1CCB18210007C884 /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 				124C8A871CCB18210007C884 /* DetailViewController.swift in Sources */,
 				124C8A851CCB18210007C884 /* MasterViewController.swift in Sources */,
 				124C8A831CCB18210007C884 /* AppDelegate.swift in Sources */,
+				123FFFAC1CCB2221004C73EF /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

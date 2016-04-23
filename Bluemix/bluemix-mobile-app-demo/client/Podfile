@@ -13,4 +13,6 @@ target 'HelloTodo' do
 
   # Object Mapper
   pod 'Gloss'
+
+  pod 'SwiftyJSON'
 end
