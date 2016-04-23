@@ -98,12 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12889DB81C955E8200FDB277 /* Build configuration list for PBXNativeTarget "iPhoneSensorDemo" */;
 			buildPhases = (
-				43D50633215552F9450F2F6E /* Check Pods Manifest.lock */,
+				43D50633215552F9450F2F6E /* 📦 Check Pods Manifest.lock */,
 				12889DA01C955E8200FDB277 /* Sources */,
 				12889DA11C955E8200FDB277 /* Frameworks */,
 				12889DA21C955E8200FDB277 /* Resources */,
-				7EA96CCC8A7F59C63E3C94C6 /* Embed Pods Frameworks */,
-				C1CC5920D13D87B4EEDE4269 /* Copy Pods Resources */,
+				7EA96CCC8A7F59C63E3C94C6 /* 📦 Embed Pods Frameworks */,
+				C1CC5920D13D87B4EEDE4269 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,14 +161,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43D50633215552F9450F2F6E /* Check Pods Manifest.lock */ = {
+		43D50633215552F9450F2F6E /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,14 +176,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7EA96CCC8A7F59C63E3C94C6 /* Embed Pods Frameworks */ = {
+		7EA96CCC8A7F59C63E3C94C6 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,14 +191,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPhoneSensorDemo/Pods-iPhoneSensorDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1CC5920D13D87B4EEDE4269 /* Copy Pods Resources */ = {
+		C1CC5920D13D87B4EEDE4269 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
