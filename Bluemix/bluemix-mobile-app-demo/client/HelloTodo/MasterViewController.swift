@@ -10,6 +10,7 @@ import UIKit
 import BMSCore
 import Gloss
 import SwiftyJSON
+import SwiftSpinner
 
 class MasterViewController: UITableViewController {
 
@@ -147,7 +148,12 @@ class MasterViewController: UITableViewController {
             "filter[limit]" : "10",
             "filter[order]" : "id DESC"
         ]
+
+        SwiftSpinner.show("Todoを読み込み中...", animated: true)
+
         request.sendWithCompletionHandler { response, error in
+            SwiftSpinner.hide()
+            
             if let e = error {
                 logger.error("Error :: \(e)")
                 return

@@ -5,14 +5,21 @@ inhibit_all_warnings!
 
 
 def bluemix_pods
+  # https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core
   pod 'BMSCore'
+  # https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security
+#  pod 'BMSSecurity' <-- ビルドで失敗するのでコメントアウト
 end
 
 target 'HelloTodo' do
   bluemix_pods
 
-  # Object Mapper
-  pod 'Gloss'
-
+  # https://github.com/SwiftyJSON/SwiftyJSON
   pod 'SwiftyJSON'
+  
+  # https://github.com/hkellaway/Gloss
+  pod 'Gloss'
+  
+  # https://github.com/icanzilb/SwiftSpinner
+  pod 'SwiftSpinner'
 end
