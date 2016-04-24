@@ -142,8 +142,11 @@ class MasterViewController: UITableViewController {
         typealias Payload = [[String: AnyObject]]
         
         let request = Request(url: "/api/Items", method: HttpMethod.GET)
-        request.headers = [:]
-        request.queryParameters = [:]
+        request.headers = ["Content-Type":"application/json", "Accept":"application/json"];
+        request.queryParameters = [
+            "filter[limit]" : "10",
+            "filter[order]" : "id DESC"
+        ]
         request.sendWithCompletionHandler { response, error in
             if let e = error {
                 logger.error("Error :: \(e)")
