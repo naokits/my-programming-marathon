@@ -9,6 +9,7 @@
 import UIKit
 import BMSCore
 
+
 let logger = Logger.logger(forName: "HelloTodoLogger")
 
 @UIApplicationMain
@@ -74,6 +75,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             .initializeWithBluemixAppRoute(appRoute,
                                            bluemixAppGUID: appGuid,
                                            bluemixRegion: bluemixRegion)
+        
+//        BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
     }
 }
 
