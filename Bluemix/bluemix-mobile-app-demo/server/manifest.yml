@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: bluemix-mobile-app-demo
+  host: bluemix-mobile-app-demo
+  disk_quota: 1024M
+  services:
+  - bluemix-mobile-app-demo-AdvancedMobileAccess
+  - bluemix-mobile-app-demo-imfpush
+  - bluemix-mobile-app-demo-cloudantNoSQLDB
