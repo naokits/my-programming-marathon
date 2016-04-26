@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSAnalyticsAPI/BMSAnalyticsAPI.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSCore/BMSCore.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Gloss/Gloss.framework"
@@ -91,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSAnalyticsAPI/BMSAnalyticsAPI.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSCore/BMSCore.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Gloss/Gloss.framework"

@@ -22,4 +22,6 @@ target 'HelloTodo' do
   
   # https://github.com/icanzilb/SwiftSpinner
   pod 'SwiftSpinner'
+  
+  pod 'Alamofire'
 end

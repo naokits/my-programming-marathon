@@ -11,6 +11,7 @@ import BMSCore
 import Gloss
 import SwiftyJSON
 import SwiftSpinner
+import Alamofire
 
 class MasterViewController: UITableViewController {
 
@@ -80,6 +81,8 @@ class MasterViewController: UITableViewController {
         
         let todo = Todo(id: 0, text: "TODO " + dateString(NSDate()), isDone: false)
         addTodo(todo)
+        
+        addPhoto()
     }
 
     // MARK: - Segues
@@ -246,6 +249,41 @@ class MasterViewController: UITableViewController {
             }
         }
     }
+    
+     /**
+     画像をアップロードする。
+     BMSCoreでは画像をアップロードできなかったので、応急的にAlamofireを使用
+     */
+    func addPhoto() {
+        logger.debug("---------------- 画像を追加")
+        let boundary = "\(NSUUID().UUIDString)"
+        let headers = [
+            "Accept":"application/json",
+            "Content-Type":"multipart/form-data; boundary=\(boundary)",
+            ]
+        let image = UIImage(named: "bluemix-lb") // とりあえず画像は固定
+        let data: NSData? = UIImagePNGRepresentation(image!)
+        let filename = "todo-" + dateString(NSDate()) + ".png"
+        logger.debug("--- \(filename)")
+        
+        let urlString = "http://bluemix-mobile-app-demo.mybluemix.net/api/containers/container1/upload"
+        
+        // Fetch Request
+        Alamofire.upload(.POST, urlString, headers: headers, multipartFormData: { multipartFormData in
+            multipartFormData.appendBodyPart(data: data!, name: "filename", fileName: filename, mimeType: "image/png")},
+                         encodingCompletion: { encodingResult in
+                            switch encodingResult {
+                            case .Success(let upload, _, _):
+                                upload.responseJSON { response in
+                                    logger.debug("画像のアップロード成功")
+                                    debugPrint(response)
+                                }
+                            case .Failure(let encodingError):
+                                debugPrint(encodingError)
+                            }
+        })
+    }
+
 
     
     // MARK: - Utility Methods
@@ -262,7 +300,7 @@ class MasterViewController: UITableViewController {
     func dateString(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
-        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        dateFormatter.dateFormat = "yyyyMMdd-HHmmss"
         let dateString: String = dateFormatter.stringFromDate(date)
         return dateString
     }
