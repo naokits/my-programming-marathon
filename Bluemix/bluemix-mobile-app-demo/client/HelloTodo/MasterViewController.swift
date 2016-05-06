@@ -13,6 +13,7 @@ import Gloss
 import SwiftyJSON
 import SwiftSpinner
 import Alamofire
+import SwiftDate
 
 class MasterViewController: UITableViewController {
 
@@ -80,7 +81,12 @@ class MasterViewController: UITableViewController {
 //        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
 //        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         
-        let todo = Todo(id: 0, text: "TODO " + dateString(NSDate()), isDone: false)
+        // YYYYMMdd-HH:mm
+        // yyyyMMdd-HHmmss
+        let now = NSDate().toString(DateFormat.Custom("yyyyMMddHHmmss"))
+        logger.debug(now!)
+
+        let todo = Todo(id: 0, text: ("TODO " + now!), isDone: false)
         addTodo(todo)
 //        addPhoto()
         
