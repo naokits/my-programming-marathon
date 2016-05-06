@@ -8,6 +8,7 @@
 
 import UIKit
 import BMSCore
+import BMSSecurity
 import Gloss
 import SwiftyJSON
 import SwiftSpinner
@@ -81,9 +82,35 @@ class MasterViewController: UITableViewController {
         
         let todo = Todo(id: 0, text: "TODO " + dateString(NSDate()), isDone: false)
         addTodo(todo)
+//        addPhoto()
         
-        addPhoto()
+//        self.login()
     }
+    
+    func logout() {
+        MCAAuthorizationManager.sharedInstance.logout(nil)
+    }
+    
+    func login() {
+        let request = Request(url: AppDelegate.customResourceURL, method: HttpMethod.GET)
+//        let request = Request(url: "https://bmxdemo.mybluemix.net/protcted", method: HttpMethod.GET)
+        
+        logger.debug("リクエスト： \(request.description)")
+        request.headers = ["Content-Type":"application/json", "Accept":"application/json"];
+
+        request.sendWithCompletionHandler { (response, error) in
+            var ans:String = ""
+            
+            if let e = error {
+                ans = "ERROR , error=\(error)"
+                logger.error("Error :: \(e)")
+                return
+            }
+
+            logger.debug("response:\(response?.responseText), no error")
+        }
+    }
+
 
     // MARK: - Segues
 
@@ -129,10 +156,17 @@ class MasterViewController: UITableViewController {
             deleteTodo(todo, completionHandler: { (error) in
                 if let e = error {
                     logger.error("TODOの削除失敗: \(e)")
+                    dispatch_async(dispatch_get_main_queue(), {
+                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                        self.tableView.reloadData()
+                    })
                     return
                 }
-                self.objects.removeAtIndex(indexPath.row)
-                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                self.dispatchOnMainQueueAfterDelay(0) {
+                    self.objects.removeAtIndex(indexPath.row)
+                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    self.tableView.reloadData()
+                }
             })
             
         } else if editingStyle == .Insert {
@@ -146,7 +180,7 @@ class MasterViewController: UITableViewController {
         typealias Payload = [[String: AnyObject]]
         
         let request = Request(url: "/api/Items", method: HttpMethod.GET)
-        request.headers = ["Content-Type":"application/json", "Accept":"application/json"];
+        request.headers = ["Content-Type":"application/json", "Accept":"application/json"]
         request.queryParameters = [
             "filter[limit]" : "10",
             "filter[order]" : "id DESC"
@@ -170,9 +204,13 @@ class MasterViewController: UITableViewController {
             let todos = [Todo].fromJSONArray(json.rawValue as! Payload)
             
             self.objects = todos
-            self.dispatchOnMainQueueAfterDelay(0) {
+//            self.dispatchOnMainQueueAfterDelay(0) {
+//                self.tableView.reloadData()
+//            }
+            dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
-            }
+            })
+
         }
     }
     
@@ -238,7 +276,7 @@ class MasterViewController: UITableViewController {
     func deleteTodo(todo:Todo, completionHandler:(NSError?) -> Void){
         print("削除対象: \(todo)")
         let req = Request(url: "/api/items/" + String(todo.id), method: .DELETE)
-        req.headers = ["Content-Type":"application/json", "Accept":"application/json"];
+        req.headers = ["Accept":"application/json"];
         
         req.sendWithCompletionHandler() { (response, error) -> Void in
             if let err = error {

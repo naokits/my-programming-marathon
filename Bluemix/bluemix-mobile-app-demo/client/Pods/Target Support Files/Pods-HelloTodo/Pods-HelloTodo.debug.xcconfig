@@ -1,8 +1,10 @@
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/Alamofire" "$CONFIGURATION_BUILD_DIR/BMSAnalyticsAPI" "$CONFIGURATION_BUILD_DIR/BMSCore" "$CONFIGURATION_BUILD_DIR/Gloss" "$CONFIGURATION_BUILD_DIR/SwiftSpinner" "$CONFIGURATION_BUILD_DIR/SwiftyJSON"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/BMSAnalyticsAPI" "$PODS_CONFIGURATION_BUILD_DIR/BMSCore" "$PODS_CONFIGURATION_BUILD_DIR/BMSSecurity" "$PODS_CONFIGURATION_BUILD_DIR/Gloss" "$PODS_CONFIGURATION_BUILD_DIR/RNCryptor" "$PODS_CONFIGURATION_BUILD_DIR/SwiftDate" "$PODS_CONFIGURATION_BUILD_DIR/SwiftSpinner" "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/BMSAnalyticsAPI/BMSAnalyticsAPI.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/BMSCore/BMSCore.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Gloss/Gloss.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftSpinner/SwiftSpinner.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "BMSAnalyticsAPI" -framework "BMSCore" -framework "Gloss" -framework "SwiftSpinner" -framework "SwiftyJSON"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/BMSAnalyticsAPI/BMSAnalyticsAPI.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/BMSCore/BMSCore.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/BMSSecurity/BMSSecurity.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Gloss/Gloss.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RNCryptor/RNCryptor.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftDate/SwiftDate.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftSpinner/SwiftSpinner.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "BMSAnalyticsAPI" -framework "BMSCore" -framework "BMSSecurity" -framework "Gloss" -framework "RNCryptor" -framework "SwiftDate" -framework "SwiftSpinner" -framework "SwiftyJSON"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

@@ -87,7 +87,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSAnalyticsAPI/BMSAnalyticsAPI.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSCore/BMSCore.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BMSSecurity/BMSSecurity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Gloss/Gloss.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RNCryptor/RNCryptor.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftDate/SwiftDate.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftSpinner/SwiftSpinner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi
@@ -95,7 +98,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSAnalyticsAPI/BMSAnalyticsAPI.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BMSCore/BMSCore.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BMSSecurity/BMSSecurity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Gloss/Gloss.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RNCryptor/RNCryptor.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftDate/SwiftDate.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftSpinner/SwiftSpinner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi
