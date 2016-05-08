@@ -9,8 +9,10 @@
   "author": "Anton Aleksandrov",
   "dependencies": {
     "bms-mca-token-validation-strategy": "2.x",
+    "body-parser": "^1.15.1",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "log4js": "^0.6.36",
     "loopback": "^2.22.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^2.1.0",
