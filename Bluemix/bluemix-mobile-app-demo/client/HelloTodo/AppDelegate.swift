@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var window: UIWindow?
 
     // PATH TO YOUR PROTECTED RESOURCE
-    internal static let customResourceURL = "/protected)" // any protected resource
+    internal static let customResourceURL = "/protected)"
 //    private static let customRealm = "PROTECTED_RESOURCE_REALM_NAOKITS" // auth realm
-    private static let customRealm = "bmxdemo-custom-realm"
+//    private static let customRealm = "bmxdemo-custom-realm"
+    private static let customRealm = "mca-backend-strategy"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -78,6 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let region = BMSClient.REGION_US_SOUTH
         BMSClient.sharedInstance.initializeWithBluemixAppRoute(route, bluemixAppGUID: guid, bluemixRegion: region)
         
+        self.hoge()
+        return
 
 //        BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
         
@@ -86,6 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let mcaAuthManager = MCAAuthorizationManager.sharedInstance
         mcaAuthManager.registerAuthenticationDelegate(delegate, realm: AppDelegate.customRealm)
         BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+        
 
         //        mcaAuthManager.registerAuthenticationDelegate(delegate, realm: AppDelegate.customRealm)
 
@@ -97,6 +101,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     }
     
+    func hoge() {
+        let request = Request(url: AppDelegate.customResourceURL, method: HttpMethod.GET)
+
+        logger.debug("リクエスト： \(request.description)")
+//        request.headers = ["Accept":"application/json"];
+        request.sendWithCompletionHandler { (response, error) in
+            var ans:String = ""
+            guard (error == nil) else {
+                ans = "ERROR , error=\(error)"
+                logger.error("Error :: \(error)")
+                return
+            }
+            logger.debug("response:\(response?.responseText), no error")
+        }
+    }
 
 }
 

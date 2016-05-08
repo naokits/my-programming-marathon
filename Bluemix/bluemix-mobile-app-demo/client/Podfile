@@ -27,4 +27,16 @@ target 'HelloTodo' do
 
   # https://github.com/malcommac/SwiftDate
   pod 'SwiftDate'
+
+
+  # 使用するかもしれないライブラリ
+  
+# https://github.com/duemunk/Async
+#  pod 'AsyncSwift'
+
+# https://github.com/andresinaka/SwiftCop
+#  pod 'SwiftCop'
+
+# https://github.com/ikesyo/Himotoki
+# pod "Himotoki", "~> 2.0"
 end

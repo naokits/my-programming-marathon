@@ -77,20 +77,19 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-//        objects.insert(NSDate(), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        
-        // YYYYMMdd-HH:mm
-        // yyyyMMdd-HHmmss
+        // FIXME: 20160506午後81804 というおかしな結果が返ってくるので、SwiftDateの作者の返事待ち
         let now = NSDate().toString(DateFormat.Custom("yyyyMMddHHmmss"))
         logger.debug(now!)
 
         let todo = Todo(id: 0, text: ("TODO " + now!), isDone: false)
-        addTodo(todo)
+        objects.insert(todo, atIndex: 0)
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+
+//        addTodo(todo)
 //        addPhoto()
         
-//        self.login()
+        self.login()
     }
     
     func logout() {
@@ -99,19 +98,20 @@ class MasterViewController: UITableViewController {
     
     func login() {
         let request = Request(url: AppDelegate.customResourceURL, method: HttpMethod.GET)
-//        let request = Request(url: "https://bmxdemo.mybluemix.net/protcted", method: HttpMethod.GET)
-        
         logger.debug("リクエスト： \(request.description)")
-        request.headers = ["Content-Type":"application/json", "Accept":"application/json"];
-
+        request.headers = ["Accept":"application/json"];
         request.sendWithCompletionHandler { (response, error) in
             var ans:String = ""
-            
-            if let e = error {
+            guard (error == nil) else {
                 ans = "ERROR , error=\(error)"
-                logger.error("Error :: \(e)")
+                logger.error("Error :: \(error)")
                 return
             }
+//            if let e = error {
+//                ans = "ERROR , error=\(error)"
+//                logger.error("Error :: \(e)")
+//                return
+//            }
 
             logger.debug("response:\(response?.responseText), no error")
         }
@@ -237,8 +237,6 @@ class MasterViewController: UITableViewController {
             
             print("--1: \(json)")
             print("--2: \(json.rawValue)")
-//            let todos = [Todo].fromJSONArray(json.rawValue as! Payload)
-            
             let todo = Todo(json: json.rawValue as! [String: AnyObject])
             logger.debug("--3: \(todo?.text)")
         }
@@ -251,13 +249,12 @@ class MasterViewController: UITableViewController {
         let jsonString = JSON(todo.toJSON()!).rawString()
 
         request.sendString(jsonString!) { (response, error) in
-            if let e = error {
-                logger.error("Error :: \(e)")
+            guard (error == nil) else {
+                logger.error("Error :: \(error)")
                 return
             }
             if response?.statusCode == 200 {
                 logger.debug("追加成功: \(response?.responseText)")
-                self.loadItems()
             }
         }
     }
