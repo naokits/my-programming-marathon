@@ -99,24 +99,32 @@ class MasterViewController: UITableViewController {
     func login() {
         let request = Request(url: AppDelegate.customResourceURL, method: HttpMethod.GET)
         logger.debug("リクエスト： \(request.description)")
-        request.headers = ["Accept":"application/json"];
+//        request.headers = ["Accept":"application/json"];
         request.sendWithCompletionHandler { (response, error) in
-            var ans:String = ""
-            guard (error == nil) else {
-                ans = "ERROR , error=\(error)"
-                logger.error("Error :: \(error)")
-                return
+            if error == nil {
+                print ("response:\(response?.responseText), no error")
+            } else {
+                print ("error: \(error)")
             }
-//            if let e = error {
+
+//            var ans:String = ""
+//            guard (error == nil) else {
+//                ans = "ERROR , error=\(error)"
+//                logger.error(ans + "statuscode: \(response?.statusCode)")
+//
+//                return
+//            }
+
+            //            if let e = error {
 //                ans = "ERROR , error=\(error)"
 //                logger.error("Error :: \(e)")
 //                return
 //            }
 
-            logger.debug("response:\(response?.responseText), no error")
+//            logger.debug("response:\(response?.responseText), no error")
         }
     }
-
+    
 
     // MARK: - Segues
 

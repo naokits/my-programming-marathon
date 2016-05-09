@@ -2,6 +2,7 @@ var packageVersion = require('./../package.json').version;
 console.log("packageVersion :: " + packageVersion);
 var log4js = require('log4js');
 var jsonParser = require('body-parser').json();
+var cfenv = require('cfenv');
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
@@ -106,8 +107,9 @@ app.use(function(req, res, next){
 
 app.start = function () {
 	// start the web server
-	return app.listen(function () {
+	return app.listen(cfenv.getAppEnv().port, function () {
 		app.emit('started');
+		// logger.info('Server listening at %s:%s', host, port);
 		var baseUrl = app.get('url').replace(/\/$/, '');
 		console.log('Web server listening at: %s', baseUrl);
 		var componentExplorer = app.get('loopback-component-explorer');

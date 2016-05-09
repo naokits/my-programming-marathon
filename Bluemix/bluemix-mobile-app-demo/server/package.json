@@ -10,6 +10,7 @@
   "dependencies": {
     "bms-mca-token-validation-strategy": "2.x",
     "body-parser": "^1.15.1",
+    "cfenv": "^1.0.3",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "log4js": "^0.6.36",
