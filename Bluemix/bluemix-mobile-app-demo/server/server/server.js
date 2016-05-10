@@ -99,10 +99,32 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 	res.status(200).json(responseJson);
 });
 
-app.use(function(req, res, next){
-	res.status(404).send("This is not the URL you're looking for");
-});
+// app.use(function(req, res, next){
+// 	res.status(404).send("This is not the URL you're looking for");
+// });
 
+
+app.post('/login', function(req, res) {
+	User.login({
+		email: req.body.email,
+		password: req.body.password
+	}, 'user', function(err, token) {
+		if (err) {
+			res.render('response', { //render view named 'response.ejs'
+				title: 'Login failed',
+				content: err,
+				redirectTo: '/',
+				redirectToLinkText: 'Try again'
+			});
+			return;
+		}
+
+		res.render('home', { //login user and render 'home' view
+			email: req.body.email,
+			accessToken: token.id
+		});
+	});
+});
 ///////////////////////////////////////////////////////////////////////////////
 
 app.start = function () {
@@ -126,4 +148,3 @@ boot(app, __dirname, function (err) {
 	if (require.main === module)
 		app.start();
 });
-
