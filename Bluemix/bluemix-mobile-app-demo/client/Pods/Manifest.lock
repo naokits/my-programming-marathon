@@ -3,14 +3,21 @@ PODS:
   - BMSAnalyticsAPI (1.0.1)
   - BMSCore (1.0.0):
     - BMSAnalyticsAPI (~> 1.0)
-  - Gloss (0.7.2)
+  - BMSSecurity (1.0.1):
+    - BMSCore (~> 1.0)
+    - RNCryptor (~> 4.0.0-beta)
+  - Gloss (0.7.3)
+  - RNCryptor (4.0.0)
+  - SwiftDate (3.0.8)
   - SwiftSpinner (0.9.5)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - BMSCore
+  - BMSSecurity
   - Gloss
+  - SwiftDate
   - SwiftSpinner
   - SwiftyJSON
 
@@ -18,10 +25,13 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   BMSAnalyticsAPI: 50f5cec71a5ad0a9af232a833d6d37c2abda54ac
   BMSCore: 2f903402eaeae17ae58fbde69120cf464c0ca413
-  Gloss: 45eb51aaa6f2725341aec8d8caa65cfcc31f7f3b
+  BMSSecurity: 87d563731bde0029af1526f53ae0c2da398e6e7d
+  Gloss: c97a95d6279821f35fa0138700bce0391bce87c1
+  RNCryptor: 59d6483908115af5c12b884db23392024e52a5fe
+  SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 0dfeb0b7042b86ecfef2e6b49cc19e65ec25c433
+PODFILE CHECKSUM: 8c98c58b0ea92fcf3a585c6113ef09fc984296c7
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.0.0.rc.1

@@ -8,7 +8,7 @@
 
 import UIKit
 import BMSCore
-
+import BMSSecurity
 
 let logger = Logger.logger(forName: "HelloTodoLogger")
 
@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
+    // PATH TO YOUR PROTECTED RESOURCE
+    internal static let customResourceURL = "/protected2)"
+//    private static let customRealm = "PROTECTED_RESOURCE_REALM_NAOKITS" // auth realm
+//    private static let customRealm = "bmxdemo-custom-realm"
+    private static let customRealm = "mca-backend-strategy"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -67,16 +72,69 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     // MARK: - Setups
     
     func setupBluemix() {
-        let appRoute = "https://bluemix-mobile-app-demo.mybluemix.net"
-        let appGuid = "3ff171d1-c941-43d6-801e-84a549550a88"
-        let bluemixRegion = BMSClient.REGION_US_SOUTH
+        let route = "https://BMXDemo.mybluemix.net"
+        let guid = "1de16665-6dc3-43db-aa3a-d9aa37014ed5"
+        let region = BMSClient.REGION_US_SOUTH
+        BMSClient.sharedInstance.initializeWithBluemixAppRoute(route, bluemixAppGUID: guid, bluemixRegion: region)
         
-        BMSClient.sharedInstance
-            .initializeWithBluemixAppRoute(appRoute,
-                                           bluemixAppGUID: appGuid,
-                                           bluemixRegion: bluemixRegion)
+        //Auth delegate for handling custom challenge
+        class MyAuthDelegate : AuthenticationDelegate {
+            
+            
+            func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject) {
+                print("onAuthenticationChallengeReceived")
+                // Your challenge answer. Should be of type [String:AnyObject]?
+                let challengeAnswer: [String:String] = [
+                    "username":"naokits",
+                    "password":"12345"
+                ]
+                authContext.submitAuthenticationChallengeAnswer(challengeAnswer)
+            }
+            
+            func onAuthenticationSuccess(info: AnyObject?) {
+                print("onAuthenticationSuccess")
+            }
+            
+            func onAuthenticationFailure(info: AnyObject?){
+                print("onAuthenticationFailure")
+            }
+        }
+
         
-//        BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+        let delegate = MyAuthDelegate()
+        let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+        BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+        mcaAuthManager.registerAuthenticationDelegate(delegate, realm: AppDelegate.customRealm)
+
+//        do {
+//            try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: AppDelegate.customRealm)
+//        } catch {
+//            print("error with register: \(error)")
+//        }
+
     }
 }
+
+////Auth delegate for handling custom challenge
+//class MyAuthDelegate : AuthenticationDelegate {
+//    
+//    
+//    func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject) {
+//        print("onAuthenticationChallengeReceived")
+//        // Your challenge answer. Should be of type [String:AnyObject]?
+//        let challengeAnswer: [String:String] = [
+//            "username":"naokits",
+//            "password":"12345"
+//        ]
+//        authContext.submitAuthenticationChallengeAnswer(challengeAnswer)
+//    }
+//    
+//    func onAuthenticationSuccess(info: AnyObject?) {
+//        print("onAuthenticationSuccess")
+//    }
+//    
+//    func onAuthenticationFailure(info: AnyObject?){
+//        print("onAuthenticationFailure")
+//    }
+//}
 

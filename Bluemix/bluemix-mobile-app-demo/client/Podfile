@@ -8,7 +8,7 @@ def bluemix_pods
   # https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core
   pod 'BMSCore'
   # https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security
-#  pod 'BMSSecurity' <-- ビルドで失敗するのでコメントアウト
+  pod 'BMSSecurity'
 end
 
 target 'HelloTodo' do
@@ -24,4 +24,19 @@ target 'HelloTodo' do
   pod 'SwiftSpinner'
   
   pod 'Alamofire'
+
+  # https://github.com/malcommac/SwiftDate
+  pod 'SwiftDate'
+
+
+  # 使用するかもしれないライブラリ
+  
+# https://github.com/duemunk/Async
+#  pod 'AsyncSwift'
+
+# https://github.com/andresinaka/SwiftCop
+#  pod 'SwiftCop'
+
+# https://github.com/ikesyo/Himotoki
+# pod "Himotoki", "~> 2.0"
 end

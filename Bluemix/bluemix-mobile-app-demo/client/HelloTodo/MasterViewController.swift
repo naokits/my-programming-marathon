@@ -8,10 +8,12 @@
 
 import UIKit
 import BMSCore
+import BMSSecurity
 import Gloss
 import SwiftyJSON
 import SwiftSpinner
 import Alamofire
+import SwiftDate
 
 class MasterViewController: UITableViewController {
 
@@ -75,15 +77,54 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-//        objects.insert(NSDate(), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        // FIXME: 20160506午後81804 というおかしな結果が返ってくるので、SwiftDateの作者の返事待ち
+        let now = NSDate().toString(DateFormat.Custom("yyyyMMddHHmmss"))
+        logger.debug(now!)
+
+        let todo = Todo(id: 0, text: ("TODO " + now!), isDone: false)
+        objects.insert(todo, atIndex: 0)
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+
+//        addTodo(todo)
+//        addPhoto()
         
-        let todo = Todo(id: 0, text: "TODO " + dateString(NSDate()), isDone: false)
-        addTodo(todo)
-        
-        addPhoto()
+        self.login()
     }
+    
+    func logout() {
+        MCAAuthorizationManager.sharedInstance.logout(nil)
+    }
+    
+    func login() {
+        let request = Request(url: AppDelegate.customResourceURL, method: HttpMethod.GET)
+        logger.debug("リクエスト： \(request.description)")
+//        request.headers = ["Accept":"application/json"];
+        request.sendWithCompletionHandler { (response, error) in
+            if error == nil {
+                print ("response:\(response?.responseText), no error")
+            } else {
+                print ("error: \(error)")
+            }
+
+//            var ans:String = ""
+//            guard (error == nil) else {
+//                ans = "ERROR , error=\(error)"
+//                logger.error(ans + "statuscode: \(response?.statusCode)")
+//
+//                return
+//            }
+
+            //            if let e = error {
+//                ans = "ERROR , error=\(error)"
+//                logger.error("Error :: \(e)")
+//                return
+//            }
+
+//            logger.debug("response:\(response?.responseText), no error")
+        }
+    }
+    
 
     // MARK: - Segues
 
@@ -129,10 +170,17 @@ class MasterViewController: UITableViewController {
             deleteTodo(todo, completionHandler: { (error) in
                 if let e = error {
                     logger.error("TODOの削除失敗: \(e)")
+                    dispatch_async(dispatch_get_main_queue(), {
+                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                        self.tableView.reloadData()
+                    })
                     return
                 }
-                self.objects.removeAtIndex(indexPath.row)
-                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                self.dispatchOnMainQueueAfterDelay(0) {
+                    self.objects.removeAtIndex(indexPath.row)
+                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    self.tableView.reloadData()
+                }
             })
             
         } else if editingStyle == .Insert {
@@ -146,7 +194,7 @@ class MasterViewController: UITableViewController {
         typealias Payload = [[String: AnyObject]]
         
         let request = Request(url: "/api/Items", method: HttpMethod.GET)
-        request.headers = ["Content-Type":"application/json", "Accept":"application/json"];
+        request.headers = ["Content-Type":"application/json", "Accept":"application/json"]
         request.queryParameters = [
             "filter[limit]" : "10",
             "filter[order]" : "id DESC"
@@ -170,9 +218,13 @@ class MasterViewController: UITableViewController {
             let todos = [Todo].fromJSONArray(json.rawValue as! Payload)
             
             self.objects = todos
-            self.dispatchOnMainQueueAfterDelay(0) {
+//            self.dispatchOnMainQueueAfterDelay(0) {
+//                self.tableView.reloadData()
+//            }
+            dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
-            }
+            })
+
         }
     }
     
@@ -193,8 +245,6 @@ class MasterViewController: UITableViewController {
             
             print("--1: \(json)")
             print("--2: \(json.rawValue)")
-//            let todos = [Todo].fromJSONArray(json.rawValue as! Payload)
-            
             let todo = Todo(json: json.rawValue as! [String: AnyObject])
             logger.debug("--3: \(todo?.text)")
         }
@@ -207,13 +257,12 @@ class MasterViewController: UITableViewController {
         let jsonString = JSON(todo.toJSON()!).rawString()
 
         request.sendString(jsonString!) { (response, error) in
-            if let e = error {
-                logger.error("Error :: \(e)")
+            guard (error == nil) else {
+                logger.error("Error :: \(error)")
                 return
             }
             if response?.statusCode == 200 {
                 logger.debug("追加成功: \(response?.responseText)")
-                self.loadItems()
             }
         }
     }
@@ -238,7 +287,7 @@ class MasterViewController: UITableViewController {
     func deleteTodo(todo:Todo, completionHandler:(NSError?) -> Void){
         print("削除対象: \(todo)")
         let req = Request(url: "/api/items/" + String(todo.id), method: .DELETE)
-        req.headers = ["Content-Type":"application/json", "Accept":"application/json"];
+        req.headers = ["Accept":"application/json"];
         
         req.sendWithCompletionHandler() { (response, error) -> Void in
             if let err = error {
