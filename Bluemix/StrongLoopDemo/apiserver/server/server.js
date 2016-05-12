@@ -3,6 +3,20 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+
+app.get('/hoge', function(req, res){
+  // console.log(session)
+  var here = new loopback.GeoPoint({lat: 6.963467, lng: 125.08509});
+  var there = new loopback.GeoPoint({lat: 7.019149, lng: 125.083784});
+  var result = loopback.GeoPoint.distanceBetween(here, there, {type: 'kilometers'})
+
+  // res.status(200).send(result)
+  res.send(200, result);
+
+})
+
+
+
 app.start = function() {
   // start the web server
   return app.listen(function() {

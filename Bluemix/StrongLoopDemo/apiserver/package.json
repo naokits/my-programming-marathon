@@ -1,5 +1,5 @@
 {
-  "name": "StrongLoopDemo",
+  "name": "demo",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^2.1.0",
     "loopback-datasource-juggler": "^2.39.0",
+    "loopback-filters": "^0.1.2",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
@@ -25,5 +26,5 @@
     "type": "",
     "url": ""
   },
-  "description": "StrongLoopDemo"
+  "description": "demo"
 }

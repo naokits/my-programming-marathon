@@ -31,5 +31,15 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Profile": {
+    "dataSource": "db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "DemoUser": {
+    "dataSource": "db",
+    "public": true
   }
 }
