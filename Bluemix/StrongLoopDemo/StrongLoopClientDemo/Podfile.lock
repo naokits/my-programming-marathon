@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (3.4.0)
+  - APIKit (1.3.0):
+    - Result (~> 2.0.0)
+  - Result (2.0.0)
+  - SwiftSpinner (0.9.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - APIKit (~> 1.3.0)
+  - SwiftSpinner
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  APIKit: 14c0233ad090ae2dcfc9f642bc8158ff7ad50a4b
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+
+PODFILE CHECKSUM: f3f4e3747d79d5c094004c41f9cf14d3a9a2a7a4
+
+COCOAPODS: 1.0.0
