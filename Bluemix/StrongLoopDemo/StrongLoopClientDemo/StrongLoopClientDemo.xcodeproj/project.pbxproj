@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		124E71861CE676D000CF396C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E71851CE676D000CF396C /* Profile.swift */; };
+		124E71881CE69BBB00CF396C /* DemoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E71871CE69BBB00CF396C /* DemoUser.swift */; };
+		124E718A1CE6B11F00CF396C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E71891CE6B11F00CF396C /* Constants.swift */; };
+		124E718E1CE6DC8500CF396C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E718D1CE6DC8500CF396C /* Login.swift */; };
+		12780BB11CE409A600C5CCB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12780BB01CE409A600C5CCB3 /* AppDelegate.swift */; };
+		12780BB31CE409A600C5CCB3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12780BB21CE409A600C5CCB3 /* MasterViewController.swift */; };
+		12780BB51CE409A600C5CCB3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12780BB41CE409A600C5CCB3 /* DetailViewController.swift */; };
+		12780BB81CE409A600C5CCB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12780BB61CE409A600C5CCB3 /* Main.storyboard */; };
+		12780BBA1CE409A600C5CCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12780BB91CE409A600C5CCB3 /* Assets.xcassets */; };
+		12780BBD1CE409A600C5CCB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12780BBB1CE409A600C5CCB3 /* LaunchScreen.storyboard */; };
+		12DDA6C81CE40E29009F27F0 /* DemoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DDA6C71CE40E29009F27F0 /* DemoAPIClient.swift */; };
+		A10DFEBCAB87C0345B226E2C /* Pods_StrongLoopClientDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8619BE6DD49674F0B6299FD /* Pods_StrongLoopClientDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		124E71851CE676D000CF396C /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = Models/Profile.swift; sourceTree = "<group>"; };
+		124E71871CE69BBB00CF396C /* DemoUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoUser.swift; path = Models/DemoUser.swift; sourceTree = "<group>"; };
+		124E71891CE6B11F00CF396C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		124E718D1CE6DC8500CF396C /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Models/Login.swift; sourceTree = "<group>"; };
+		12780BAD1CE409A500C5CCB3 /* StrongLoopClientDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrongLoopClientDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12780BB01CE409A600C5CCB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		12780BB21CE409A600C5CCB3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		12780BB41CE409A600C5CCB3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		12780BB71CE409A600C5CCB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12780BB91CE409A600C5CCB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12780BBC1CE409A600C5CCB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		12780BBE1CE409A600C5CCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DDA6C71CE40E29009F27F0 /* DemoAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAPIClient.swift; sourceTree = "<group>"; };
+		40FBF26C6A7B40520005A55C /* Pods-StrongLoopClientDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrongLoopClientDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StrongLoopClientDemo/Pods-StrongLoopClientDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B12B8384D4CAA1C34E32C779 /* Pods-StrongLoopClientDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StrongLoopClientDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-StrongLoopClientDemo/Pods-StrongLoopClientDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B8619BE6DD49674F0B6299FD /* Pods_StrongLoopClientDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StrongLoopClientDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12780BAA1CE409A500C5CCB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10DFEBCAB87C0345B226E2C /* Pods_StrongLoopClientDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12780BA41CE409A500C5CCB3 = {
+			isa = PBXGroup;
+			children = (
+				12780BAF1CE409A500C5CCB3 /* StrongLoopClientDemo */,
+				12780BAE1CE409A500C5CCB3 /* Products */,
+				B90743C11B1575E797010A85 /* Pods */,
+				7F3AAB15A1DE590515E521A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		12780BAE1CE409A500C5CCB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12780BAD1CE409A500C5CCB3 /* StrongLoopClientDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12780BAF1CE409A500C5CCB3 /* StrongLoopClientDemo */ = {
+			isa = PBXGroup;
+			children = (
+				12780BB01CE409A600C5CCB3 /* AppDelegate.swift */,
+				124E71891CE6B11F00CF396C /* Constants.swift */,
+				12DDA6C71CE40E29009F27F0 /* DemoAPIClient.swift */,
+				124E71871CE69BBB00CF396C /* DemoUser.swift */,
+				124E71851CE676D000CF396C /* Profile.swift */,
+				124E718D1CE6DC8500CF396C /* Login.swift */,
+				12780BB21CE409A600C5CCB3 /* MasterViewController.swift */,
+				12780BB41CE409A600C5CCB3 /* DetailViewController.swift */,
+				12780BB61CE409A600C5CCB3 /* Main.storyboard */,
+				12780BB91CE409A600C5CCB3 /* Assets.xcassets */,
+				12780BBB1CE409A600C5CCB3 /* LaunchScreen.storyboard */,
+				12780BBE1CE409A600C5CCB3 /* Info.plist */,
+			);
+			path = StrongLoopClientDemo;
+			sourceTree = "<group>";
+		};
+		7F3AAB15A1DE590515E521A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8619BE6DD49674F0B6299FD /* Pods_StrongLoopClientDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B90743C11B1575E797010A85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40FBF26C6A7B40520005A55C /* Pods-StrongLoopClientDemo.debug.xcconfig */,
+				B12B8384D4CAA1C34E32C779 /* Pods-StrongLoopClientDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12780BAC1CE409A500C5CCB3 /* StrongLoopClientDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12780BC11CE409A600C5CCB3 /* Build configuration list for PBXNativeTarget "StrongLoopClientDemo" */;
+			buildPhases = (
+				47FD347A6D75192FF9291EED /* 📦 Check Pods Manifest.lock */,
+				12780BA91CE409A500C5CCB3 /* Sources */,
+				12780BAA1CE409A500C5CCB3 /* Frameworks */,
+				12780BAB1CE409A500C5CCB3 /* Resources */,
+				5387522981942D7B7D12C96F /* 📦 Embed Pods Frameworks */,
+				7DEF3395B1128880FB436601 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StrongLoopClientDemo;
+			productName = StrongLoopClientDemo;
+			productReference = 12780BAD1CE409A500C5CCB3 /* StrongLoopClientDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12780BA51CE409A500C5CCB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Naoki Tsutsui";
+				TargetAttributes = {
+					12780BAC1CE409A500C5CCB3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 12780BA81CE409A500C5CCB3 /* Build configuration list for PBXProject "StrongLoopClientDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 12780BA41CE409A500C5CCB3;
+			productRefGroup = 12780BAE1CE409A500C5CCB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12780BAC1CE409A500C5CCB3 /* StrongLoopClientDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12780BAB1CE409A500C5CCB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12780BBD1CE409A600C5CCB3 /* LaunchScreen.storyboard in Resources */,
+				12780BBA1CE409A600C5CCB3 /* Assets.xcassets in Resources */,
+				12780BB81CE409A600C5CCB3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47FD347A6D75192FF9291EED /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5387522981942D7B7D12C96F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StrongLoopClientDemo/Pods-StrongLoopClientDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DEF3395B1128880FB436601 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StrongLoopClientDemo/Pods-StrongLoopClientDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12780BA91CE409A500C5CCB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12DDA6C81CE40E29009F27F0 /* DemoAPIClient.swift in Sources */,
+				124E71861CE676D000CF396C /* Profile.swift in Sources */,
+				12780BB51CE409A600C5CCB3 /* DetailViewController.swift in Sources */,
+				124E71881CE69BBB00CF396C /* DemoUser.swift in Sources */,
+				124E718A1CE6B11F00CF396C /* Constants.swift in Sources */,
+				12780BB31CE409A600C5CCB3 /* MasterViewController.swift in Sources */,
+				12780BB11CE409A600C5CCB3 /* AppDelegate.swift in Sources */,
+				124E718E1CE6DC8500CF396C /* Login.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		12780BB61CE409A600C5CCB3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12780BB71CE409A600C5CCB3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		12780BBB1CE409A600C5CCB3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12780BBC1CE409A600C5CCB3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12780BBF1CE409A600C5CCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		12780BC01CE409A600C5CCB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12780BC21CE409A600C5CCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FBF26C6A7B40520005A55C /* Pods-StrongLoopClientDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StrongLoopClientDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nkapp.StrongLoopClientDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		12780BC31CE409A600C5CCB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12B8384D4CAA1C34E32C779 /* Pods-StrongLoopClientDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StrongLoopClientDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nkapp.StrongLoopClientDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12780BA81CE409A500C5CCB3 /* Build configuration list for PBXProject "StrongLoopClientDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12780BBF1CE409A600C5CCB3 /* Debug */,
+				12780BC01CE409A600C5CCB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12780BC11CE409A600C5CCB3 /* Build configuration list for PBXNativeTarget "StrongLoopClientDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12780BC21CE409A600C5CCB3 /* Debug */,
+				12780BC31CE409A600C5CCB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12780BA51CE409A500C5CCB3 /* Project object */;
+}

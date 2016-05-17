@@ -1,0 +1,6 @@
+framework module Pods_StrongLoopClientDemo {
+  umbrella header "Pods-StrongLoopClientDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
