@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         self.setupSplitViewController()
         
+        self.printPlistDir()
+        self.printUserDefaults()
+        
         return true
     }
     
@@ -62,6 +65,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return false
     }
 
-    // MARK: - Functions
+    // MARK: - Utility Methods
     
+    /// プロパティリストの保存場所をコンソールに表示する
+    func printPlistDir() {
+        let dirs = NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true)
+        let libraryDir = dirs[0]
+        let preferencesDir = libraryDir + "/Preferences"
+        print("plistのディレクトリ: \(preferencesDir)")
+    }
+    
+    /**
+     保存されているUserDefaultsの内容を表示する（アプリで追加した内容のみ）
+     */
+    func printUserDefaults() {
+        let appDomain = NSBundle.mainBundle().bundleIdentifier
+        let dic = NSUserDefaults.standardUserDefaults().persistentDomainForName(appDomain!)
+        print("-----------------------------------------------------")
+        print("All Keys: \(dic?.keys)")
+        if dic?.keys != nil {
+            for (key, value) in dic! {
+                print("*** key: \(key) value: \(value)")
+            }
+        }
+        print("-----------------------------------------------------")
+    }
 }
