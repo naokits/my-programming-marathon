@@ -28,14 +28,10 @@ app.use(passport.initialize());
 app.delete('/api/Items/:id', passport.authenticate('mca-backend-strategy', {session: false}));
 
 // Protect /protected endpoint which is used in Getting Started with Bluemix Mobile Services tutorials
-app.get('/protected', passport.authenticate('mca-backend-strategy', {session: false}), function(req, res){
+app.get('/protected', passport.authenticate('mca-backend-strategy', {session: false}), function(req, res　{
+	console.log("以下は認証完了後に実行される")
 	console.log(session)
 	res.send("Hello, this is a protected resouce of the mobile backend application!");
-});
-
-app.get('/protected2', passport.authenticate('mca-backend-strategy', {session: false}), function(req, res){
-	console.log(session)
-	res.send(200, req.securityContext);
 });
 
 // ------------ Protecting backend APIs with Mobile Client Access end -----------------
@@ -51,6 +47,8 @@ app.get('/protected2', passport.authenticate('mca-backend-strategy', {session: f
    handleChallengeAnswer: モバイル・クライアントからの認証チャレンジ応答を処理します。
  */
 
+// 認証プロセスの最初のステップを指定します。
+// カスタム ID プロバイダーは、「challenge」、「success」、または「failure」のいずれかの状況とともに応答する必要があります。
 app.post('/apps/:tenantId/:realmName/startAuthorization', jsonParser, function(req, res){
 	var tenantId = req.params.tenantId;
 	var realmName = req.params.realmName;
@@ -68,6 +66,7 @@ app.post('/apps/:tenantId/:realmName/startAuthorization', jsonParser, function(r
 	res.status(200).json(responseJson);
 });
 
+// モバイル・クライアントからの認証チャレンジ応答を処理します
 app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, function(req, res){
 	var tenantId = req.params.tenantId;
 	var realmName = req.params.realmName;
