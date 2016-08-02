@@ -1,0 +1,6 @@
+framework module Loggerithm {
+  umbrella header "Loggerithm-umbrella.h"
+
+  export *
+  module * { export * }
+}
