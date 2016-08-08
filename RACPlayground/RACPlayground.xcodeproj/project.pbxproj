@@ -13,6 +13,7 @@
 		122A3BDB1D50EEE700752961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122A3BDA1D50EEE700752961 /* Assets.xcassets */; };
 		122A3BDE1D50EEE700752961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122A3BDC1D50EEE700752961 /* LaunchScreen.storyboard */; };
 		122A3BE91D50EEE700752961 /* RACPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A3BE81D50EEE700752961 /* RACPlaygroundTests.swift */; };
+		122A3BF41D5138F000752961 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122A3BF31D5138F000752961 /* ViewModel.swift */; };
 		C31328BED039538F0EE8FE72 /* Pods_RACPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FD069977A89DDD3219D33 /* Pods_RACPlayground.framework */; };
 		DBB1E120E6E91B51B1441536 /* Pods_RACPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF430CFC0BB8B07554D6A959 /* Pods_RACPlaygroundTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,8 @@
 		122A3BE41D50EEE700752961 /* RACPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A3BE81D50EEE700752961 /* RACPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RACPlaygroundTests.swift; sourceTree = "<group>"; };
 		122A3BEA1D50EEE700752961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122A3BF31D5138F000752961 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1251F15B1D5211B600E5BB66 /* RACPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RACPlayground.playground; sourceTree = "<group>"; };
 		8C81806D519B44208EB3FECD /* Pods-RACPlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACPlaygroundTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACPlaygroundTests/Pods-RACPlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		95B2E604FB7B04934087B47A /* Pods-RACPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACPlayground/Pods-RACPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		B05FD069977A89DDD3219D33 /* Pods_RACPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 			children = (
 				122A3BD31D50EEE700752961 /* AppDelegate.swift */,
 				122A3BD51D50EEE700752961 /* ViewController.swift */,
+				122A3BF31D5138F000752961 /* ViewModel.swift */,
+				1251F15B1D5211B600E5BB66 /* RACPlayground.playground */,
 				122A3BD71D50EEE700752961 /* Main.storyboard */,
 				122A3BDA1D50EEE700752961 /* Assets.xcassets */,
 				122A3BDC1D50EEE700752961 /* LaunchScreen.storyboard */,
@@ -329,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				122A3BD61D50EEE700752961 /* ViewController.swift in Sources */,
+				122A3BF41D5138F000752961 /* ViewModel.swift in Sources */,
 				122A3BD41D50EEE700752961 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

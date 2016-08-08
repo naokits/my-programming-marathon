@@ -3,19 +3,26 @@ PODS:
   - ReactiveCocoa (4.2.1):
     - Result (~> 2.0)
   - Result (2.1.3)
+  - RxCocoa (2.6.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.6.0)
   - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Loggerithm
   - ReactiveCocoa
+  - RxCocoa
+  - RxSwift
   - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Loggerithm: 54aad85bc3242f7f038170a8a42c82272cc21203
   ReactiveCocoa: 5a42745f11ea236f405bb9ce5e97c5e3b23562dd
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 97bceafccfbc4ee138853df66367b74b19bef77e
+PODFILE CHECKSUM: 944c6849b72dc530f7a109ba9d57e4b3abf916e0
 
 COCOAPODS: 1.0.1

@@ -67,7 +67,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="nextButton" destination="FSL-sb-Qvh" id="yLH-fQ-KxS"/>
+                        <outlet property="playButton" destination="uEZ-fl-OSw" id="3Zc-eV-3r7"/>
                         <outlet property="playerView" destination="kbR-53-wNt" id="fvd-bO-vFd"/>
+                        <outlet property="previousButton" destination="Gh1-z9-ivM" id="WLc-Xs-wqV"/>
+                        <outlet property="repeatButton" destination="PAz-XA-1RU" id="GH9-Mz-XQo"/>
+                        <outlet property="shuffleButton" destination="zZl-9p-u8u" id="T0a-Jl-6MS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

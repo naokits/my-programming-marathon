@@ -5,6 +5,9 @@ target 'RACPlayground' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+#  pod 'RxSwift'
+#  pod 'RxCocoa'
+  pod 'Bond', '~> 4.0'
   pod 'ReactiveCocoa'
   pod 'youtube-ios-player-helper'
   pod 'Loggerithm'

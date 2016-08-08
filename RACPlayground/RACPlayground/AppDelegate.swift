@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Loggerithm
+
+var log = Loggerithm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        setupLog()
+        
         return true
     }
 
@@ -41,6 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Setup Log
+    
+    func setupLog() {
+        log.logLevel = .Debug
+    }
 
 }
 
