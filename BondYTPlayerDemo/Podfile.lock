@@ -1,0 +1,18 @@
+PODS:
+  - Bond (4.3.1)
+  - Loggerithm (1.3.2)
+  - youtube-ios-player-helper (0.1.6)
+
+DEPENDENCIES:
+  - Bond (~> 4.0)
+  - Loggerithm
+  - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  Bond: 55903fc67f09e8e49791a657163cabba1d6fb29d
+  Loggerithm: 54aad85bc3242f7f038170a8a42c82272cc21203
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+
+PODFILE CHECKSUM: ee7eb1bd1fe2206e5a6e6d08bf2ac5d1ca18865a
+
+COCOAPODS: 1.0.1
