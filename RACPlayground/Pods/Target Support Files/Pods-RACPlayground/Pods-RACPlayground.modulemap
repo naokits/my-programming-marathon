@@ -1,0 +1,6 @@
+framework module Pods_RACPlayground {
+  umbrella header "Pods-RACPlayground-umbrella.h"
+
+  export *
+  module * { export * }
+}
